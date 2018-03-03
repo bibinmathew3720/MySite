@@ -1,0 +1,6 @@
+framework module Pods_MysiteUITests {
+  umbrella header "Pods-MysiteUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

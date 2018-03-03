@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-path" translatesAutoresizingMaskIntoConstraints="NO" id="ARh-ND-qsP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rotate" translatesAutoresizingMaskIntoConstraints="NO" id="LMK-34-vjy">
+                                <rect key="frame" x="67" y="342" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="HeY-RT-k7C"/>
+                                    <constraint firstAttribute="width" constant="240" id="Yaz-me-vtK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ARh-ND-qsP" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7PR-HW-TMG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LMK-34-vjy" secondAttribute="bottom" constant="308" id="JzQ-ni-w08"/>
+                            <constraint firstItem="ARh-ND-qsP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eE7-Bt-DeQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LMK-34-vjy" secondAttribute="trailing" constant="68" id="eFY-7S-d5j"/>
+                            <constraint firstItem="LMK-34-vjy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="gr6-DT-r7M"/>
+                            <constraint firstAttribute="bottom" secondItem="ARh-ND-qsP" secondAttribute="bottom" id="jjw-Fs-aFY"/>
+                            <constraint firstItem="LMK-34-vjy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="o6o-P8-EXC"/>
+                            <constraint firstItem="ARh-ND-qsP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y6i-5G-T7R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle-path" width="414" height="736"/>
+        <image name="rotate" width="119" height="151"/>
+    </resources>
+</document>
