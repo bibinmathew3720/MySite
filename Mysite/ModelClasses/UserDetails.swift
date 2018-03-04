@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+/* User Type
+ 1 = Contractor
+ 2 = Owner */
+
 class UserDetails: NSManagedObject {
  
     static func saveUserData(userData:Dictionary<String, String>){
