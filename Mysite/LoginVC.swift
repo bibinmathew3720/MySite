@@ -8,8 +8,10 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: BaseViewController {
 
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,35 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func logInButtonAction(_ sender: UIButton) {
+        if(ValidateDetails()){
+            let userDetail = UserDetails.getUserDetailsWithEmailIdAndPassword(emailId: emailTF.text!, password: passwordTF.text!)
+            if(userDetail == nil){
+                showAlertWithMessage(alertMessage: "Invalid login credentials")
+            }
+            else{
+                performSegue(withIdentifier: "contractorlogIntoHomeIdentifier", sender: sender)
+            }
+        }
+    }
+    
+    
+    func ValidateDetails() -> Bool {
+        var isValid:Bool = false
+        var messageString:String?
+        if(self.emailTF.text?.isEmpty)! {
+            messageString = "Please enter email id"
+        } else if(self.passwordTF.text?.isEmpty)! {
+            messageString = "Please enter password"
+        }else {
+            isValid = true
+        }
+        if !isValid {
+            self.showAlertWithMessage(alertMessage: messageString!)
+        }
+        return isValid
+    }
+    
     /*
     // MARK: - Navigation
 

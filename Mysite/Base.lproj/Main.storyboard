@@ -712,7 +712,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="V0j-7k-E9B" kind="show" id="PbS-d6-zdF"/>
+                                    <action selector="logInButtonAction:" destination="omT-3U-pfT" eventType="touchUpInside" id="Nq3-sd-T0H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-1L-5MP">
@@ -781,6 +781,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jx2-ds-4zn"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="PAC-lt-JNS" id="Pzn-Bw-W8D"/>
+                        <outlet property="passwordTF" destination="1cM-bP-Cml" id="mWd-po-LDv"/>
+                        <segue destination="MEK-wS-x91" kind="show" identifier="ownerLogInIdentifier" id="Mhy-dg-8QI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zs-uY-FcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -988,7 +993,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qWC-Gi-PLG">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-xV-UJQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1082,7 +1087,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sQE-lO-idR">
-                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-5H-GHF">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1270,7 +1275,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="n8d-xf-Mxm">
-                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAZ-Cs-Doa">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1552,7 +1557,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7MN-nk-ToW">
-                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yG-0b-Bcv">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1646,7 +1651,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="7" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="wRL-4W-w9P">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-XT-jG0">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -6266,9 +6271,9 @@
         <image name="tab-barBG" width="422" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mDt-Jv-K4b"/>
+        <segue reference="Mhy-dg-8QI"/>
         <segue reference="Tuh-2g-vLD"/>
-        <segue reference="DKA-6r-byl"/>
+        <segue reference="8Qe-7l-KFj"/>
         <segue reference="Vfz-fI-ev8"/>
         <segue reference="a4f-zq-gI3"/>
     </inferredMetricsTieBreakers>
