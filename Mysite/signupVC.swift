@@ -28,6 +28,7 @@ class signupVC: BaseViewController {
     }
     @IBAction func signUpAction(_ sender: UIButton) {
         if(ValidateDetails()){
+            self.saveUserDetailsToDB()
             performSegue(withIdentifier: "showHomePageSegue", sender: sender)
         }
     }
@@ -59,6 +60,16 @@ class signupVC: BaseViewController {
             self.showAlertWithMessage(alertMessage: messageString!)
         }
         return isValid
+    }
+    
+    func saveUserDetailsToDB(){
+        var userDetailsDict:[String:AnyObject] = [:]
+        userDetailsDict["firstName"] = self.firstNameTF.text as AnyObject
+        userDetailsDict["lastName"] = self.lastNameTF.text as AnyObject
+        userDetailsDict["emailID"] = self.emailTF.text as AnyObject
+        userDetailsDict["phoneNo"] = self.phoneTF.text as AnyObject
+        userDetailsDict["password"] = self.passwordTF.text as AnyObject
+        UserDetails.saveUserData(userData: userDetailsDict as! Dictionary<String, String>)
     }
     
 

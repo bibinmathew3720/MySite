@@ -11,7 +11,7 @@
 		5006F8B62035B5B800AF5924 /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5006F8B52035B5B800AF5924 /* AnnotationPin.swift */; };
 		500AFD252049A27700D8E5BC /* AddStageInsideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AFD242049A27700D8E5BC /* AddStageInsideVC.swift */; };
 		500FF2812039A750009A0B5F /* engineerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2802039A750009A0B5F /* engineerViewVC.swift */; };
-		500FF2C4203ABD5D009A0B5F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2C2203ABD5D009A0B5F /* Model.xcdatamodeld */; };
+		500FF2C4203ABD5D009A0B5F /* Mysite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2C2203ABD5D009A0B5F /* Mysite.xcdatamodeld */; };
 		500FF2C6203AC1E5009A0B5F /* CoreDatahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2C5203AC1E5009A0B5F /* CoreDatahandler.swift */; };
 		500FF2C8203AC815009A0B5F /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2C7203AC815009A0B5F /* ProjectsVC.swift */; };
 		5015CDAB204A83B900889EDC /* ForDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015CDAA204A83B900889EDC /* ForDataCatch.swift */; };
@@ -61,7 +61,7 @@
 		5006F8B52035B5B800AF5924 /* AnnotationPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
 		500AFD242049A27700D8E5BC /* AddStageInsideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStageInsideVC.swift; sourceTree = "<group>"; };
 		500FF2802039A750009A0B5F /* engineerViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = engineerViewVC.swift; sourceTree = "<group>"; };
-		500FF2C3203ABD5D009A0B5F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		500FF2C3203ABD5D009A0B5F /* Mysite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mysite.xcdatamodel; sourceTree = "<group>"; };
 		500FF2C5203AC1E5009A0B5F /* CoreDatahandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatahandler.swift; sourceTree = "<group>"; };
 		500FF2C7203AC815009A0B5F /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
 		5015CDAA204A83B900889EDC /* ForDataCatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForDataCatch.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		50967A09202D5FF100114D8A = {
 			isa = PBXGroup;
 			children = (
-				500FF2C2203ABD5D009A0B5F /* Model.xcdatamodeld */,
+				500FF2C2203ABD5D009A0B5F /* Mysite.xcdatamodeld */,
 				50967A14202D5FF100114D8A /* Mysite */,
 				50967A29202D5FF100114D8A /* MysiteTests */,
 				50967A34202D5FF100114D8A /* MysiteUITests */,
@@ -555,7 +555,7 @@
 				500FF2C8203AC815009A0B5F /* ProjectsVC.swift in Sources */,
 				D0FBF135204C068500919FC4 /* UserDetails.swift in Sources */,
 				50A97B9B20304967000C7675 /* LoginPart.swift in Sources */,
-				500FF2C4203ABD5D009A0B5F /* Model.xcdatamodeld in Sources */,
+				500FF2C4203ABD5D009A0B5F /* Mysite.xcdatamodeld in Sources */,
 				50967A48202D84ED00114D8A /* signupVC.swift in Sources */,
 				5015CDAD204AA04400889EDC /* VideoLoadingVC.swift in Sources */,
 				500AFD252049A27700D8E5BC /* AddStageInsideVC.swift in Sources */,
@@ -863,13 +863,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		500FF2C2203ABD5D009A0B5F /* Model.xcdatamodeld */ = {
+		500FF2C2203ABD5D009A0B5F /* Mysite.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				500FF2C3203ABD5D009A0B5F /* Model.xcdatamodel */,
+				500FF2C3203ABD5D009A0B5F /* Mysite.xcdatamodel */,
 			);
-			currentVersion = 500FF2C3203ABD5D009A0B5F /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = 500FF2C3203ABD5D009A0B5F /* Mysite.xcdatamodel */;
+			path = Mysite.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
