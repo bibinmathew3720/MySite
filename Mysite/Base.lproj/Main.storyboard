@@ -165,7 +165,7 @@
                                     <color key="titleColor" red="0.99153577520000002" green="1" blue="0.98653930990000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MEK-wS-x91" kind="showDetail" id="pcJ-sA-ndC"/>
+                                    <action selector="signUpAction:" destination="Qtk-My-KQP" eventType="touchUpInside" id="59B-CZ-HGz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ةيبرعلا ةغللا" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDr-27-SJl">
@@ -279,6 +279,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nqc-sm-6Kv"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPwdTF" destination="ZsK-gH-BB1" id="Kt1-74-0Vj"/>
+                        <outlet property="emailTF" destination="jPs-L0-VLW" id="CoH-X4-DRb"/>
+                        <outlet property="firstNameTF" destination="tFF-Lh-WbK" id="wRi-rZ-vCL"/>
+                        <outlet property="lastNameTF" destination="rZV-3L-j9h" id="VkC-q7-joA"/>
+                        <outlet property="passwordTF" destination="aLI-21-oUX" id="vmr-pb-43o"/>
+                        <outlet property="phoneTF" destination="bD0-tx-5D0" id="dbp-dG-O0b"/>
+                        <segue destination="MEK-wS-x91" kind="show" identifier="showHomePageSegue" id="rYy-Qb-oJm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MT-rS-XxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -974,7 +983,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qWC-Gi-PLG">
-                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-xV-UJQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1068,7 +1077,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sQE-lO-idR">
-                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-5H-GHF">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1162,7 +1171,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-jb-hSq">
-                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7Z-km-o94">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1256,7 +1265,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="n8d-xf-Mxm">
-                                                <rect key="frame" x="0.0" y="-236" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAZ-Cs-Doa">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1350,7 +1359,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8TQ-Xh-d6i">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBx-pJ-bkZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1444,7 +1453,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="5" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IAc-wM-TrT">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Kq-mG-qct">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1538,7 +1547,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7MN-nk-ToW">
-                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yG-0b-Bcv">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1632,7 +1641,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="7" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="wRL-4W-w9P">
-                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-XT-jG0">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1726,7 +1735,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="8" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="TY6-It-ATH">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z50-JW-oWp">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -4364,7 +4373,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2o-M8-HSU" userLabel="WORK View">
-                                                        <rect key="frame" x="0.0" y="-392" width="375" height="100"/>
+                                                        <rect key="frame" x="0.0" y="-409" width="375" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Work Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efs-q9-HC8">
                                                                 <rect key="frame" x="19" y="8" width="316" height="21"/>
@@ -4417,7 +4426,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="233-M7-s5s" userLabel="PRICE View">
-                                                        <rect key="frame" x="0.0" y="-358.5" width="375" height="100"/>
+                                                        <rect key="frame" x="0.0" y="-390" width="375" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pricing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EU1-YF-9Sd">
                                                                 <rect key="frame" x="19" y="8" width="316" height="21"/>
@@ -6252,10 +6261,10 @@
         <image name="tab-barBG" width="422" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="On1-Ke-vc5"/>
+        <segue reference="rYy-Qb-oJm"/>
         <segue reference="Tuh-2g-vLD"/>
         <segue reference="U79-Pj-UjO"/>
-        <segue reference="Skc-Ho-z2H"/>
+        <segue reference="Vfz-fI-ev8"/>
         <segue reference="Agx-wO-sbk"/>
     </inferredMetricsTieBreakers>
 </document>

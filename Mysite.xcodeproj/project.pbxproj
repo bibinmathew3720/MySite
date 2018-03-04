@@ -33,6 +33,8 @@
 		5E053F0F9C919E22F4DA74E0 /* Pods_Mysite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CF16332A917B98832D7D2C /* Pods_Mysite.framework */; };
 		77FA9EACD5965C9D9BE1DC0A /* Pods_MysiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87261219B4AE59D95360871C /* Pods_MysiteUITests.framework */; };
 		D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */; };
+		D0FBF135204C068500919FC4 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF134204C068500919FC4 /* UserDetails.swift */; };
+		D0FBF137204C103D00919FC4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF136204C103D00919FC4 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		95CF16332A917B98832D7D2C /* Pods_Mysite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mysite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77B392F8CF70DB9E02D94E2 /* Pods-MysiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		D0FBF134204C068500919FC4 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		D0FBF136204C103D00919FC4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E575F7DEA52E8EADF5D56907 /* Pods_MysiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MysiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,6 +165,7 @@
 		50967A14202D5FF100114D8A /* Mysite */ = {
 			isa = PBXGroup;
 			children = (
+				D0FBF131204C043A00919FC4 /* ModelClasses */,
 				D0FBF12D204C034F00919FC4 /* Helpers */,
 				50967A45202D64EE00114D8A /* fonts */,
 				50967A15202D5FF100114D8A /* AppDelegate.swift */,
@@ -182,6 +187,7 @@
 				500AFD242049A27700D8E5BC /* AddStageInsideVC.swift */,
 				5015CDAA204A83B900889EDC /* ForDataCatch.swift */,
 				5015CDAC204AA04400889EDC /* VideoLoadingVC.swift */,
+				D0FBF136204C103D00919FC4 /* BaseViewController.swift */,
 			);
 			path = Mysite;
 			sourceTree = "<group>";
@@ -218,6 +224,14 @@
 				D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */,
 			);
 			path = CoreDataHandler;
+			sourceTree = "<group>";
+		};
+		D0FBF131204C043A00919FC4 /* ModelClasses */ = {
+			isa = PBXGroup;
+			children = (
+				D0FBF134204C068500919FC4 /* UserDetails.swift */,
+			);
+			path = ModelClasses;
 			sourceTree = "<group>";
 		};
 		E56262E6F848102D227FCD15 /* Frameworks */ = {
@@ -531,6 +545,7 @@
 				5006F8B62035B5B800AF5924 /* AnnotationPin.swift in Sources */,
 				50967A18202D5FF100114D8A /* introVC.swift in Sources */,
 				509F9EBB2031AD8F00967250 /* LoginVO.swift in Sources */,
+				D0FBF137204C103D00919FC4 /* BaseViewController.swift in Sources */,
 				50A97B9D2030859C000C7675 /* SignINpart.swift in Sources */,
 				500FF2C6203AC1E5009A0B5F /* CoreDatahandler.swift in Sources */,
 				509F9EB9203193D200967250 /* LoginVC.swift in Sources */,
@@ -538,6 +553,7 @@
 				50967A16202D5FF100114D8A /* AppDelegate.swift in Sources */,
 				D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */,
 				500FF2C8203AC815009A0B5F /* ProjectsVC.swift in Sources */,
+				D0FBF135204C068500919FC4 /* UserDetails.swift in Sources */,
 				50A97B9B20304967000C7675 /* LoginPart.swift in Sources */,
 				500FF2C4203ABD5D009A0B5F /* Model.xcdatamodeld in Sources */,
 				50967A48202D84ED00114D8A /* signupVC.swift in Sources */,
