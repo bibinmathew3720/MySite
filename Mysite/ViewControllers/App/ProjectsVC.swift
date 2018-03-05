@@ -10,17 +10,28 @@ import UIKit
 import SideMenu
 
 class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
-    
+    var projectsArray = [Projects]()
     @IBOutlet var projectCollectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let data = Projects.getAllProjects() as? [Projects]
+            
+        {
+            projectsArray = data
+            self.projectCollectionView.reloadData()
+        }
+        
     }
     
     // MARK: - UICollectionViewDataSource protocol
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return projectsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell  {
@@ -28,7 +39,8 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectCell", for: indexPath as IndexPath) as! ProjectCollectionViewCell
         cell.backgroundColor = UIColor.cyan
-        
+        let project = projectsArray[indexPath.row]
+        cell.placeLabel.text = project.name
         return cell
     }
     
@@ -43,7 +55,7 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
-        performSegue(withIdentifier: "ProjectDetailVC", sender: nil)
+      //  performSegue(withIdentifier: "ProjectDetailVC", sender: nil)
     }
 }
 

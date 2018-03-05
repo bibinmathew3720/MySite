@@ -23,9 +23,11 @@ class AddStageInsideVC: UIViewController {
     @IBOutlet weak var stage9StackView: UIStackView!
     @IBOutlet weak var stage10StackView: UIStackView!
     
-    
+    var projectDetail:[String:AnyObject] = [:]
    
     
+    @IBOutlet weak var progressTextField: UITextField!
+    @IBOutlet weak var stageNameTextFeild: UITextField!
     @IBOutlet weak var tag0STview: UIStackView!
     
     var count : Int = 0
@@ -73,8 +75,11 @@ class AddStageInsideVC: UIViewController {
     
     @IBAction func addBTNpressed(_ sender: UIButton) {
         
-        counter(countsec: count)
-        
+      //  counter(countsec: count)
+        projectDetail["stageName"] = stageNameTextFeild.text as AnyObject
+        projectDetail["progress"] = progressTextField.text as AnyObject
+        Projects.saveProjectData(projectData: projectDetail as! Dictionary<String, String>)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     

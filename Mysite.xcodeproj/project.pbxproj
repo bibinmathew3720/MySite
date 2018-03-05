@@ -35,6 +35,8 @@
 		509771A42049EF3F0051B9E9 /* Pods_MysiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E575F7DEA52E8EADF5D56907 /* Pods_MysiteTests.framework */; };
 		5E053F0F9C919E22F4DA74E0 /* Pods_Mysite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CF16332A917B98832D7D2C /* Pods_Mysite.framework */; };
 		77FA9EACD5965C9D9BE1DC0A /* Pods_MysiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87261219B4AE59D95360871C /* Pods_MysiteUITests.framework */; };
+		D00A81D7204D8FFE00FF3CDD /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */; };
+		D00A81DA204D972900FF3CDD /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D9204D972900FF3CDD /* Projects.swift */; };
 		D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,8 @@
 		8BB9B931493F58241BEC8A46 /* Pods-Mysite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mysite.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mysite/Pods-Mysite.release.xcconfig"; sourceTree = "<group>"; };
 		95CF16332A917B98832D7D2C /* Pods_Mysite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mysite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77B392F8CF70DB9E02D94E2 /* Pods-MysiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		D00A81D9204D972900FF3CDD /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
 		E575F7DEA52E8EADF5D56907 /* Pods_MysiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MysiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,6 +165,7 @@
 				4750990F204D1344009E854D /* ProjectsVC.swift */,
 				47509940204D6CD2009E854D /* ProjectCollectionViewCell.swift */,
 				47509910204D1344009E854D /* VideoLoadingVC.swift */,
+				D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 		4750992E204D1449009E854D /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
+				D00A81D8204D971000FF3CDD /* Projects */,
 				47509933204D146F009E854D /* UserDetails */,
 			);
 			path = ModelClasses;
@@ -283,6 +289,14 @@
 				50967A37202D5FF100114D8A /* Info.plist */,
 			);
 			path = MysiteUITests;
+			sourceTree = "<group>";
+		};
+		D00A81D8204D971000FF3CDD /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				D00A81D9204D972900FF3CDD /* Projects.swift */,
+			);
+			path = Projects;
 			sourceTree = "<group>";
 		};
 		D0FBF12D204C034F00919FC4 /* Helpers */ = {
@@ -608,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00A81D7204D8FFE00FF3CDD /* AddProjectViewController.swift in Sources */,
 				47509941204D6CD3009E854D /* ProjectCollectionViewCell.swift in Sources */,
 				4750991E204D1344009E854D /* ProjectsVC.swift in Sources */,
 				4750991B204D1344009E854D /* AnnotationPin.swift in Sources */,
@@ -628,6 +643,7 @@
 				47509922204D1344009E854D /* LoginVC.swift in Sources */,
 				4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */,
 				47509935204D146F009E854D /* UserDetails.swift in Sources */,
+				D00A81DA204D972900FF3CDD /* Projects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

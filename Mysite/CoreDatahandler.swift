@@ -36,16 +36,16 @@ class CoreDatahandler: NSObject {
         
     }
     
-    class func fetchObject() -> [Project]?{
-        let context = getContext()
-        var project:[Project]? = nil
-        do {
-            project = try context.fetch(Project.fetchRequest())
-            return project
-            
-        }catch{
-            return project
-            
-        }
-    }
+//    class func fetchObject() -> [Project]?{
+//        let context = getContext()
+//        var project:[Project]? = nil
+//        do {
+//            project = try context.fetch(Project.fetchRequest())
+//            return project
+//
+//        }catch{
+//            return project
+//
+//        }
+//    }
 }
