@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5006F8B42035B2E300AF5924 /* InsideProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5006F8B32035B2E300AF5924 /* InsideProjectVC.swift */; };
-		5006F8B62035B5B800AF5924 /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5006F8B52035B5B800AF5924 /* AnnotationPin.swift */; };
-		500AFD252049A27700D8E5BC /* AddStageInsideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AFD242049A27700D8E5BC /* AddStageInsideVC.swift */; };
-		500FF2812039A750009A0B5F /* engineerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2802039A750009A0B5F /* engineerViewVC.swift */; };
-		500FF2C4203ABD5D009A0B5F /* Mysite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2C2203ABD5D009A0B5F /* Mysite.xcdatamodeld */; };
-		500FF2C6203AC1E5009A0B5F /* CoreDatahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2C5203AC1E5009A0B5F /* CoreDatahandler.swift */; };
-		500FF2C8203AC815009A0B5F /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FF2C7203AC815009A0B5F /* ProjectsVC.swift */; };
-		5015CDAB204A83B900889EDC /* ForDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015CDAA204A83B900889EDC /* ForDataCatch.swift */; };
-		5015CDAD204AA04400889EDC /* VideoLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015CDAC204AA04400889EDC /* VideoLoadingVC.swift */; };
-		50967A16202D5FF100114D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50967A15202D5FF100114D8A /* AppDelegate.swift */; };
-		50967A18202D5FF100114D8A /* introVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50967A17202D5FF100114D8A /* introVC.swift */; };
+		4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990B204D1344009E854D /* AddStageInsideVC.swift */; };
+		4750991B204D1344009E854D /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990C204D1344009E854D /* AnnotationPin.swift */; };
+		4750991C204D1344009E854D /* engineerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990D204D1344009E854D /* engineerViewVC.swift */; };
+		4750991D204D1344009E854D /* InsideProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990E204D1344009E854D /* InsideProjectVC.swift */; };
+		4750991E204D1344009E854D /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990F204D1344009E854D /* ProjectsVC.swift */; };
+		4750991F204D1344009E854D /* VideoLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509910204D1344009E854D /* VideoLoadingVC.swift */; };
+		47509920204D1344009E854D /* introVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509912204D1344009E854D /* introVC.swift */; };
+		47509921204D1344009E854D /* LoginPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509913204D1344009E854D /* LoginPart.swift */; };
+		47509922204D1344009E854D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509914204D1344009E854D /* LoginVC.swift */; };
+		47509923204D1344009E854D /* LoginVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509915204D1344009E854D /* LoginVO.swift */; };
+		47509924204D1344009E854D /* SignINpart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509916204D1344009E854D /* SignINpart.swift */; };
+		47509925204D1344009E854D /* signupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509917204D1344009E854D /* signupVC.swift */; };
+		47509926204D1344009E854D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509919204D1344009E854D /* AppDelegate.swift */; };
+		47509929204D13DD009E854D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509928204D13DD009E854D /* BaseViewController.swift */; };
+		47509935204D146F009E854D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509934204D146F009E854D /* UserDetails.swift */; };
+		47509939204D1528009E854D /* ForDataCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509937204D1527009E854D /* ForDataCatch.swift */; };
+		4750993A204D1528009E854D /* CoreDatahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509938204D1528009E854D /* CoreDatahandler.swift */; };
+		4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4750993B204D1667009E854D /* Mysite.xcdatamodeld */; };
 		50967A1B202D5FF100114D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50967A19202D5FF100114D8A /* Main.storyboard */; };
 		50967A1D202D5FF100114D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50967A1C202D5FF100114D8A /* Assets.xcassets */; };
 		50967A20202D5FF100114D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50967A1E202D5FF100114D8A /* LaunchScreen.storyboard */; };
 		50967A2B202D5FF100114D8A /* MysiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50967A2A202D5FF100114D8A /* MysiteTests.swift */; };
 		50967A36202D5FF100114D8A /* MysiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50967A35202D5FF100114D8A /* MysiteUITests.swift */; };
 		50967A46202D64EE00114D8A /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 50967A45202D64EE00114D8A /* fonts */; };
-		50967A48202D84ED00114D8A /* signupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50967A47202D84ED00114D8A /* signupVC.swift */; };
 		509771A42049EF3F0051B9E9 /* Pods_MysiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E575F7DEA52E8EADF5D56907 /* Pods_MysiteTests.framework */; };
-		509F9EB9203193D200967250 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F9EB8203193D200967250 /* LoginVC.swift */; };
-		509F9EBB2031AD8F00967250 /* LoginVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F9EBA2031AD8F00967250 /* LoginVO.swift */; };
-		50A97B9B20304967000C7675 /* LoginPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A97B9A20304967000C7675 /* LoginPart.swift */; };
-		50A97B9D2030859C000C7675 /* SignINpart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A97B9C2030859C000C7675 /* SignINpart.swift */; };
 		5E053F0F9C919E22F4DA74E0 /* Pods_Mysite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CF16332A917B98832D7D2C /* Pods_Mysite.framework */; };
 		77FA9EACD5965C9D9BE1DC0A /* Pods_MysiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87261219B4AE59D95360871C /* Pods_MysiteUITests.framework */; };
 		D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */; };
-		D0FBF135204C068500919FC4 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF134204C068500919FC4 /* UserDetails.swift */; };
-		D0FBF137204C103D00919FC4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF136204C103D00919FC4 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,18 +57,25 @@
 /* Begin PBXFileReference section */
 		19469F21256E78E544F1ED06 /* Pods-MysiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		46323546D6F92A0C181CF886 /* Pods-MysiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteTests/Pods-MysiteTests.release.xcconfig"; sourceTree = "<group>"; };
-		5006F8B32035B2E300AF5924 /* InsideProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideProjectVC.swift; sourceTree = "<group>"; };
-		5006F8B52035B5B800AF5924 /* AnnotationPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
-		500AFD242049A27700D8E5BC /* AddStageInsideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStageInsideVC.swift; sourceTree = "<group>"; };
-		500FF2802039A750009A0B5F /* engineerViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = engineerViewVC.swift; sourceTree = "<group>"; };
-		500FF2C3203ABD5D009A0B5F /* Mysite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mysite.xcdatamodel; sourceTree = "<group>"; };
-		500FF2C5203AC1E5009A0B5F /* CoreDatahandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatahandler.swift; sourceTree = "<group>"; };
-		500FF2C7203AC815009A0B5F /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
-		5015CDAA204A83B900889EDC /* ForDataCatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForDataCatch.swift; sourceTree = "<group>"; };
-		5015CDAC204AA04400889EDC /* VideoLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLoadingVC.swift; sourceTree = "<group>"; };
+		4750990B204D1344009E854D /* AddStageInsideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStageInsideVC.swift; sourceTree = "<group>"; };
+		4750990C204D1344009E854D /* AnnotationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
+		4750990D204D1344009E854D /* engineerViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = engineerViewVC.swift; sourceTree = "<group>"; };
+		4750990E204D1344009E854D /* InsideProjectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideProjectVC.swift; sourceTree = "<group>"; };
+		4750990F204D1344009E854D /* ProjectsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
+		47509910204D1344009E854D /* VideoLoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoLoadingVC.swift; sourceTree = "<group>"; };
+		47509912204D1344009E854D /* introVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = introVC.swift; sourceTree = "<group>"; };
+		47509913204D1344009E854D /* LoginPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPart.swift; sourceTree = "<group>"; };
+		47509914204D1344009E854D /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		47509915204D1344009E854D /* LoginVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVO.swift; sourceTree = "<group>"; };
+		47509916204D1344009E854D /* SignINpart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignINpart.swift; sourceTree = "<group>"; };
+		47509917204D1344009E854D /* signupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupVC.swift; sourceTree = "<group>"; };
+		47509919204D1344009E854D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47509928204D13DD009E854D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		47509934204D146F009E854D /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		47509937204D1527009E854D /* ForDataCatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForDataCatch.swift; sourceTree = "<group>"; };
+		47509938204D1528009E854D /* CoreDatahandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDatahandler.swift; sourceTree = "<group>"; };
+		4750993C204D1667009E854D /* Mysite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mysite.xcdatamodel; sourceTree = "<group>"; };
 		50967A12202D5FF100114D8A /* Mysite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mysite.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		50967A15202D5FF100114D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50967A17202D5FF100114D8A /* introVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introVC.swift; sourceTree = "<group>"; };
 		50967A1A202D5FF100114D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50967A1C202D5FF100114D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50967A1F202D5FF100114D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,12 +87,7 @@
 		50967A35202D5FF100114D8A /* MysiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MysiteUITests.swift; sourceTree = "<group>"; };
 		50967A37202D5FF100114D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50967A45202D64EE00114D8A /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = SOURCE_ROOT; };
-		50967A47202D84ED00114D8A /* signupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupVC.swift; sourceTree = "<group>"; };
 		509771A72049F24D0051B9E9 /* project.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = project.xcworkspace; path = Mysite.xcodeproj/project.xcworkspace; sourceTree = "<group>"; };
-		509F9EB8203193D200967250 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		509F9EBA2031AD8F00967250 /* LoginVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVO.swift; sourceTree = "<group>"; };
-		50A97B9A20304967000C7675 /* LoginPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPart.swift; sourceTree = "<group>"; };
-		50A97B9C2030859C000C7675 /* SignINpart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignINpart.swift; sourceTree = "<group>"; };
 		5F7E75850C7AEC753B14C548 /* Pods-MysiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteTests/Pods-MysiteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64EA6ADD2152FA5E784EF194 /* Pods-Mysite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mysite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mysite/Pods-Mysite.debug.xcconfig"; sourceTree = "<group>"; };
 		87261219B4AE59D95360871C /* Pods_MysiteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MysiteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +95,6 @@
 		95CF16332A917B98832D7D2C /* Pods_Mysite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mysite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77B392F8CF70DB9E02D94E2 /* Pods-MysiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
-		D0FBF134204C068500919FC4 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
-		D0FBF136204C103D00919FC4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E575F7DEA52E8EADF5D56907 /* Pods_MysiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MysiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,11 +139,96 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		47509909204D1344009E854D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				47509927204D13DD009E854D /* BaseClass */,
+				47509911204D1344009E854D /* UserManagement */,
+				4750990A204D1344009E854D /* App */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4750990A204D1344009E854D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4750990B204D1344009E854D /* AddStageInsideVC.swift */,
+				4750990C204D1344009E854D /* AnnotationPin.swift */,
+				4750990D204D1344009E854D /* engineerViewVC.swift */,
+				4750990E204D1344009E854D /* InsideProjectVC.swift */,
+				4750990F204D1344009E854D /* ProjectsVC.swift */,
+				47509910204D1344009E854D /* VideoLoadingVC.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		47509911204D1344009E854D /* UserManagement */ = {
+			isa = PBXGroup;
+			children = (
+				47509912204D1344009E854D /* introVC.swift */,
+				47509913204D1344009E854D /* LoginPart.swift */,
+				47509914204D1344009E854D /* LoginVC.swift */,
+				47509915204D1344009E854D /* LoginVO.swift */,
+				47509916204D1344009E854D /* SignINpart.swift */,
+				47509917204D1344009E854D /* signupVC.swift */,
+			);
+			path = UserManagement;
+			sourceTree = "<group>";
+		};
+		47509918204D1344009E854D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				47509919204D1344009E854D /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		47509927204D13DD009E854D /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				47509928204D13DD009E854D /* BaseViewController.swift */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		4750992A204D1449009E854D /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				4750992B204D1449009E854D /* DataModel */,
+				4750992E204D1449009E854D /* ModelClasses */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		4750992B204D1449009E854D /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		4750992E204D1449009E854D /* ModelClasses */ = {
+			isa = PBXGroup;
+			children = (
+				47509933204D146F009E854D /* UserDetails */,
+			);
+			path = ModelClasses;
+			sourceTree = "<group>";
+		};
+		47509933204D146F009E854D /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				47509934204D146F009E854D /* UserDetails.swift */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
 		50967A09202D5FF100114D8A = {
 			isa = PBXGroup;
 			children = (
-				500FF2C2203ABD5D009A0B5F /* Mysite.xcdatamodeld */,
+				4750993B204D1667009E854D /* Mysite.xcdatamodeld */,
 				50967A14202D5FF100114D8A /* Mysite */,
+				50967A1C202D5FF100114D8A /* Assets.xcassets */,
 				50967A29202D5FF100114D8A /* MysiteTests */,
 				50967A34202D5FF100114D8A /* MysiteUITests */,
 				50967A13202D5FF100114D8A /* Products */,
@@ -165,29 +250,16 @@
 		50967A14202D5FF100114D8A /* Mysite */ = {
 			isa = PBXGroup;
 			children = (
-				D0FBF131204C043A00919FC4 /* ModelClasses */,
+				47509918204D1344009E854D /* AppDelegate */,
+				47509909204D1344009E854D /* ViewControllers */,
+				4750992A204D1449009E854D /* CoreDataModel */,
 				D0FBF12D204C034F00919FC4 /* Helpers */,
-				50967A45202D64EE00114D8A /* fonts */,
-				50967A15202D5FF100114D8A /* AppDelegate.swift */,
-				50967A17202D5FF100114D8A /* introVC.swift */,
 				50967A19202D5FF100114D8A /* Main.storyboard */,
-				50967A1C202D5FF100114D8A /* Assets.xcassets */,
 				50967A1E202D5FF100114D8A /* LaunchScreen.storyboard */,
 				50967A21202D5FF100114D8A /* Info.plist */,
-				50967A47202D84ED00114D8A /* signupVC.swift */,
-				50A97B9A20304967000C7675 /* LoginPart.swift */,
-				50A97B9C2030859C000C7675 /* SignINpart.swift */,
-				509F9EB8203193D200967250 /* LoginVC.swift */,
-				509F9EBA2031AD8F00967250 /* LoginVO.swift */,
-				5006F8B32035B2E300AF5924 /* InsideProjectVC.swift */,
-				5006F8B52035B5B800AF5924 /* AnnotationPin.swift */,
-				500FF2802039A750009A0B5F /* engineerViewVC.swift */,
-				500FF2C5203AC1E5009A0B5F /* CoreDatahandler.swift */,
-				500FF2C7203AC815009A0B5F /* ProjectsVC.swift */,
-				500AFD242049A27700D8E5BC /* AddStageInsideVC.swift */,
-				5015CDAA204A83B900889EDC /* ForDataCatch.swift */,
-				5015CDAC204AA04400889EDC /* VideoLoadingVC.swift */,
-				D0FBF136204C103D00919FC4 /* BaseViewController.swift */,
+				47509938204D1528009E854D /* CoreDatahandler.swift */,
+				47509937204D1527009E854D /* ForDataCatch.swift */,
+				50967A45202D64EE00114D8A /* fonts */,
 			);
 			path = Mysite;
 			sourceTree = "<group>";
@@ -224,14 +296,6 @@
 				D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */,
 			);
 			path = CoreDataHandler;
-			sourceTree = "<group>";
-		};
-		D0FBF131204C043A00919FC4 /* ModelClasses */ = {
-			isa = PBXGroup;
-			children = (
-				D0FBF134204C068500919FC4 /* UserDetails.swift */,
-			);
-			path = ModelClasses;
 			sourceTree = "<group>";
 		};
 		E56262E6F848102D227FCD15 /* Frameworks */ = {
@@ -541,25 +605,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500FF2812039A750009A0B5F /* engineerViewVC.swift in Sources */,
-				5006F8B62035B5B800AF5924 /* AnnotationPin.swift in Sources */,
-				50967A18202D5FF100114D8A /* introVC.swift in Sources */,
-				509F9EBB2031AD8F00967250 /* LoginVO.swift in Sources */,
-				D0FBF137204C103D00919FC4 /* BaseViewController.swift in Sources */,
-				50A97B9D2030859C000C7675 /* SignINpart.swift in Sources */,
-				500FF2C6203AC1E5009A0B5F /* CoreDatahandler.swift in Sources */,
-				509F9EB9203193D200967250 /* LoginVC.swift in Sources */,
-				5006F8B42035B2E300AF5924 /* InsideProjectVC.swift in Sources */,
-				50967A16202D5FF100114D8A /* AppDelegate.swift in Sources */,
+				4750991E204D1344009E854D /* ProjectsVC.swift in Sources */,
+				4750991B204D1344009E854D /* AnnotationPin.swift in Sources */,
+				4750993A204D1528009E854D /* CoreDatahandler.swift in Sources */,
+				47509926204D1344009E854D /* AppDelegate.swift in Sources */,
+				47509925204D1344009E854D /* signupVC.swift in Sources */,
+				47509929204D13DD009E854D /* BaseViewController.swift in Sources */,
+				47509939204D1528009E854D /* ForDataCatch.swift in Sources */,
+				47509921204D1344009E854D /* LoginPart.swift in Sources */,
 				D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */,
-				500FF2C8203AC815009A0B5F /* ProjectsVC.swift in Sources */,
-				D0FBF135204C068500919FC4 /* UserDetails.swift in Sources */,
-				50A97B9B20304967000C7675 /* LoginPart.swift in Sources */,
-				500FF2C4203ABD5D009A0B5F /* Mysite.xcdatamodeld in Sources */,
-				50967A48202D84ED00114D8A /* signupVC.swift in Sources */,
-				5015CDAD204AA04400889EDC /* VideoLoadingVC.swift in Sources */,
-				500AFD252049A27700D8E5BC /* AddStageInsideVC.swift in Sources */,
-				5015CDAB204A83B900889EDC /* ForDataCatch.swift in Sources */,
+				47509923204D1344009E854D /* LoginVO.swift in Sources */,
+				4750991F204D1344009E854D /* VideoLoadingVC.swift in Sources */,
+				47509924204D1344009E854D /* SignINpart.swift in Sources */,
+				4750991C204D1344009E854D /* engineerViewVC.swift in Sources */,
+				4750991D204D1344009E854D /* InsideProjectVC.swift in Sources */,
+				4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */,
+				47509920204D1344009E854D /* introVC.swift in Sources */,
+				47509922204D1344009E854D /* LoginVC.swift in Sources */,
+				4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */,
+				47509935204D146F009E854D /* UserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,12 +927,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		500FF2C2203ABD5D009A0B5F /* Mysite.xcdatamodeld */ = {
+		4750993B204D1667009E854D /* Mysite.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				500FF2C3203ABD5D009A0B5F /* Mysite.xcdatamodel */,
+				4750993C204D1667009E854D /* Mysite.xcdatamodel */,
 			);
-			currentVersion = 500FF2C3203ABD5D009A0B5F /* Mysite.xcdatamodel */;
+			currentVersion = 4750993C204D1667009E854D /* Mysite.xcdatamodel */;
 			path = Mysite.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
