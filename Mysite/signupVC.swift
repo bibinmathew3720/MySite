@@ -15,6 +15,8 @@ class signupVC: BaseViewController {
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPwdTF: UITextField!
+    
+    var isContractor:Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,6 +71,12 @@ class signupVC: BaseViewController {
         userDetailsDict["emailID"] = self.emailTF.text as AnyObject
         userDetailsDict["phoneNo"] = self.phoneTF.text as AnyObject
         userDetailsDict["password"] = self.passwordTF.text as AnyObject
+        if(isContractor)!{
+            userDetailsDict["userType"] = "1" as AnyObject
+        }
+        else{
+            userDetailsDict["userType"] = "2" as AnyObject
+        }
         UserDetails.saveUserData(userData: userDetailsDict as! Dictionary<String, String>)
     }
     

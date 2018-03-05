@@ -73,12 +73,25 @@ class LoginPart: UIViewController {
     
     @IBAction func Next2LogBTN(_ sender: Any) {
         
-
+     // performSegue(withIdentifier: "logInPartToSignUp", sender: sender)
 //        if Next2LoginBTN.isHidden == true{
 //            if selectBOX.isHidden == false || selectBOX2.isHidden == false{
 //                Next2LoginBTN.isHidden = false
 //                     }
 //        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "nextButtonToSignUp"){
+            let signUp = segue.destination as! signupVC
+            if(selectBOX.isHidden){
+                signUp.isContractor = false
+            }
+            else{
+                signUp.isContractor = true
+            }
+        }
+        
     }
     
     /*

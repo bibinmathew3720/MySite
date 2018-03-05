@@ -358,7 +358,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Next2LogBTN:" destination="fqd-ns-2bM" eventType="touchUpInside" id="UHE-ng-b7p"/>
-                                    <segue destination="Qtk-My-KQP" kind="show" id="797-ie-Z6Y"/>
+                                    <segue destination="Qtk-My-KQP" kind="show" identifier="nextButtonToSignUp" id="Zc3-SQ-QaX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -993,7 +993,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qWC-Gi-PLG">
-                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-xV-UJQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1087,7 +1087,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sQE-lO-idR">
-                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-5H-GHF">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1181,7 +1181,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-jb-hSq">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7Z-km-o94">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1275,7 +1275,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="n8d-xf-Mxm">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAZ-Cs-Doa">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1369,7 +1369,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8TQ-Xh-d6i">
-                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBx-pJ-bkZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1557,7 +1557,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7MN-nk-ToW">
-                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yG-0b-Bcv">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -6273,8 +6273,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Mhy-dg-8QI"/>
         <segue reference="Tuh-2g-vLD"/>
-        <segue reference="8Qe-7l-KFj"/>
-        <segue reference="Vfz-fI-ev8"/>
+        <segue reference="U79-Pj-UjO"/>
+        <segue reference="Skc-Ho-z2H"/>
         <segue reference="a4f-zq-gI3"/>
     </inferredMetricsTieBreakers>
 </document>

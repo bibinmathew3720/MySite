@@ -26,6 +26,7 @@ class UserDetails: NSManagedObject {
         userDetail?.email = userData["emailID"]
         userDetail?.phoneNo = userData["phoneNo"]
         userDetail?.password = userData["password"]
+        userDetail?.userType = userData["userType"]
         CoreDataHandler.sharedInstance.saveContext()
     }
     
