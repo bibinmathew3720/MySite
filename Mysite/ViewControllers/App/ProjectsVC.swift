@@ -9,7 +9,7 @@
 import UIKit
 import SideMenu
 
-class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
+class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     
     @IBOutlet var projectCollectionView: UICollectionView!
     
@@ -30,6 +30,12 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
         cell.backgroundColor = UIColor.cyan
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    
+        let width = (self.projectCollectionView?.frame.size.width)! - 10
+        return CGSize(width: CGFloat(width / 2), height: 150)
     }
     
     // MARK: - UICollectionViewDelegate protocol

@@ -9,5 +9,9 @@
 import UIKit
 
 class ProjectCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var headingProjectLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var placeLabel: UILabel!
+    @IBOutlet var peoductImageView: UIImageView!
     
 }
