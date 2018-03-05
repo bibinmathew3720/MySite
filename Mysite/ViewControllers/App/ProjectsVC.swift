@@ -43,6 +43,7 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+        performSegue(withIdentifier: "ProjectDetailVC", sender: nil)
     }
 }
 
