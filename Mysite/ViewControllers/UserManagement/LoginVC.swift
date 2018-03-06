@@ -35,6 +35,10 @@ class LoginVC: BaseViewController {
         }
     }
     
+    @IBAction func backAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func ValidateDetails() -> Bool {
         var isValid:Bool = false
@@ -50,6 +54,15 @@ class LoginVC: BaseViewController {
             self.showAlertWithMessage(alertMessage: messageString!)
         }
         return isValid
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "contractorlogIntoHomeIdentifier"){
+            let tabVC = segue.destination as! UITabBarController
+            let navVC = tabVC.viewControllers![0] as! UINavigationController
+            let projectVC = navVC.viewControllers[0] as! ProjectsVC
+            projectVC.isContractor = true
+        }
     }
     
     /*

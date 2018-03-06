@@ -11,9 +11,17 @@ import SideMenu
 
 class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     var projectsArray = [Projects]()
+    @IBOutlet weak var plusButton: UIBarButtonItem!
     @IBOutlet var projectCollectionView: UICollectionView!
+    var isContractor:Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(isContractor)!{
+            
+        }
+        else{
+            navigationItem.rightBarButtonItem = nil
+        }
       
     }
     

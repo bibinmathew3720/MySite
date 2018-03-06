@@ -51,6 +51,18 @@ class LoginVO: BaseViewController {
         return isValid
     }
     
+    @IBAction func backAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ownerLogInIdentifier"){
+            let tabVC = segue.destination as! UITabBarController
+            let navVC = tabVC.viewControllers![0] as! UINavigationController
+            let projectVC = navVC.viewControllers[0] as! ProjectsVC
+            projectVC.isContractor = false
+        }
+    }
     /*
     // MARK: - Navigation
 

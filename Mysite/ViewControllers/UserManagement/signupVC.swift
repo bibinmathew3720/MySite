@@ -84,6 +84,15 @@ class signupVC: BaseViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "showHomePageSegue"){
+            let tabVC = segue.destination as! UITabBarController
+            let navVC = tabVC.viewControllers![0] as! UINavigationController
+            let projectVC = navVC.viewControllers[0] as! ProjectsVC
+            projectVC.isContractor = isContractor
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
