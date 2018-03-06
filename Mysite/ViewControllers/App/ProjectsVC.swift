@@ -57,7 +57,14 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
-      //  performSegue(withIdentifier: "ProjectDetailVC", sender: nil)
+        performSegue(withIdentifier: "projectToDetail", sender: projectsArray[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "projectToDetail"){
+            let projectDetail = segue.destination as! InsideProjectVC
+            projectDetail.selProject = sender as! Projects
+        }
     }
 }
 

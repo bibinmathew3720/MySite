@@ -42,8 +42,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var threedotICN: UIBarButtonItem!
     
     @IBOutlet weak var navDropfrom3dot: UIView!
-    
-    
+    var selProject:Projects!
     @IBAction func DotBTN(_ sender: UIBarButtonItem) {
         
         if navDropfrom3dot.isHidden == true{
@@ -89,6 +88,8 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
         pin = AnnotationPin(title: "Abudhabi", Subtitle: "", coordinate: coordinate)
         
         mapView.addAnnotation(pin)
+        ////print(Float(selProject.progress as! Int16))
+        //self.progress1.progress = Float(selProject.progress as! Int16)
         
     }
     
