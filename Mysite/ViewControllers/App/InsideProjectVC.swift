@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class InsideProjectVC: UIViewController, MKMapViewDelegate {
+    @IBOutlet weak var progressperLabel: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -88,8 +89,10 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
         pin = AnnotationPin(title: "Abudhabi", Subtitle: "", coordinate: coordinate)
         
         mapView.addAnnotation(pin)
-        ////print(Float(selProject.progress as! Int16))
-        //self.progress1.progress = Float(selProject.progress as! Int16)
+        let pr = Float(selProject.progress!)
+        print(Float(pr!/100))
+        self.progress1.progress = Float(pr!/100)
+        self.progressperLabel.text = selProject.progress!+"%"
         
     }
     
