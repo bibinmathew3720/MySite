@@ -142,13 +142,13 @@
                                 <rect key="frame" x="33" y="378" width="309" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CONFIRM PASSWORD" textAlignment="justified" minimumFontSize="17" background="LINE DOWN" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZsK-gH-BB1">
                                 <rect key="frame" x="33" y="426" width="309" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z1F-MV-YsH">
                                 <rect key="frame" x="165" y="591" width="51" height="31"/>
@@ -448,7 +448,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqN-53-5i0">
                                 <rect key="frame" x="204" y="431" width="151" height="30"/>
@@ -699,7 +699,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AG-fb-jI5">
                                 <rect key="frame" x="204" y="421" width="151" height="30"/>
@@ -1009,7 +1009,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qWC-Gi-PLG">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-xV-UJQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1103,7 +1103,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sQE-lO-idR">
-                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-5H-GHF">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1197,7 +1197,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-jb-hSq">
-                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7Z-km-o94">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1291,7 +1291,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="n8d-xf-Mxm">
-                                                <rect key="frame" x="0.0" y="-96" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAZ-Cs-Doa">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1479,7 +1479,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="5" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IAc-wM-TrT">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Kq-mG-qct">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1573,7 +1573,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7MN-nk-ToW">
-                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-152" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yG-0b-Bcv">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -1667,7 +1667,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" tag="7" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="wRL-4W-w9P">
-                                                <rect key="frame" x="0.0" y="-160" width="343" height="50"/>
+                                                <rect key="frame" x="0.0" y="-198" width="343" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-XT-jG0">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -6225,7 +6225,7 @@
         <image name="tab-barBG" width="422" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rYy-Qb-oJm"/>
-        <segue reference="U79-Pj-UjO"/>
+        <segue reference="Mhy-dg-8QI"/>
+        <segue reference="8Qe-7l-KFj"/>
     </inferredMetricsTieBreakers>
 </document>
