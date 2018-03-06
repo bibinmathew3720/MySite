@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
         let alertController = UIAlertController.init(title: "Warning", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: nil)
         alertController.addAction(okAction)
-        self.show(alertController, sender: nil)
+        present(alertController, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

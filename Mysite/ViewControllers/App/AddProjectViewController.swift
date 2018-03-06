@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddProjectViewController: UIViewController {
+class AddProjectViewController: BaseViewController {
 
     @IBOutlet weak var locationTextFeild: UITextField!
     @IBOutlet weak var endingDateTextFeild: UITextField!
@@ -25,12 +25,35 @@ class AddProjectViewController: UIViewController {
     }
 
     @IBAction func NextButtonAction(_ sender: Any) {
+        if(ValidateDetails()){
+            projectDict["projectName"] = self.projectNameTextFeild.text as AnyObject
+            projectDict["startDate"] = self.startingDateTextFeild.text as AnyObject
+            projectDict["endDate"] = self.endingDateTextFeild.text as AnyObject
+            projectDict["location"] = self.locationTextFeild.text as AnyObject
+            performSegue(withIdentifier: "addProjectToNextPage", sender: nil)
+        }
         
-        projectDict["projectName"] = self.projectNameTextFeild.text as AnyObject
-        projectDict["startDate"] = self.startingDateTextFeild.text as AnyObject
-        projectDict["endDate"] = self.endingDateTextFeild.text as AnyObject
-        projectDict["location"] = self.locationTextFeild.text as AnyObject
-        
+    }
+    
+    func ValidateDetails() -> Bool {
+        var isValid:Bool = false
+        var messageString:String?
+        if(self.projectNameTextFeild.text?.isEmpty)! {
+            messageString = "Please enter project name"
+        } else if(self.startingDateTextFeild.text?.isEmpty)! {
+            messageString = "Please enter project start date"
+        } else if(self.endingDateTextFeild.text?.isEmpty)! {
+            messageString = "Please enter project end date"
+        }
+        else if(self.locationTextFeild.text?.isEmpty)! {
+            messageString = "Please enter project location"
+        } else {
+            isValid = true
+        }
+        if !isValid {
+            self.showAlertWithMessage(alertMessage: messageString!)
+        }
+        return isValid
     }
     
     @IBAction func ViewTapAction(_ sender: Any) {

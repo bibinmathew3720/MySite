@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddStageInsideVC: UIViewController {
+class AddStageInsideVC: BaseViewController {
     
     @IBOutlet weak var mainStackView: UIStackView!
     
@@ -76,10 +76,28 @@ class AddStageInsideVC: UIViewController {
     @IBAction func addBTNpressed(_ sender: UIButton) {
         
       //  counter(countsec: count)
-        projectDetail["stageName"] = stageNameTextFeild.text as AnyObject
-        projectDetail["progress"] = progressTextField.text as AnyObject
-        Projects.saveProjectData(projectData: projectDetail as! Dictionary<String, String>)
-        self.navigationController?.popToRootViewController(animated: true)
+        if(ValidateDetails()){
+            projectDetail["stageName"] = stageNameTextFeild.text as AnyObject
+            projectDetail["progress"] = progressTextField.text as AnyObject
+            Projects.saveProjectData(projectData: projectDetail as! Dictionary<String, String>)
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    func ValidateDetails() -> Bool {
+        var isValid:Bool = false
+        var messageString:String?
+        if(self.stageNameTextFeild.text?.isEmpty)! {
+            messageString = "Please enter project status"
+        } else if(self.progressTextField.text?.isEmpty)! {
+            messageString = "Please enter progress"
+        }else {
+            isValid = true
+        }
+        if !isValid {
+            self.showAlertWithMessage(alertMessage: messageString!)
+        }
+        return isValid
     }
     
     

@@ -83,6 +83,9 @@ class SignINpart: UIViewController {
         }
     }
     
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
     /*
     // MARK: - Navigation
