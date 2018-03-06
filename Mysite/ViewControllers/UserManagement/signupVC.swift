@@ -80,7 +80,10 @@ class signupVC: BaseViewController {
         UserDetails.saveUserData(userData: userDetailsDict as! Dictionary<String, String>)
     }
     
-
+    @IBAction func leftButtonAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

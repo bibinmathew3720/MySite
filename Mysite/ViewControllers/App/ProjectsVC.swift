@@ -40,7 +40,9 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectCell", for: indexPath as IndexPath) as! ProjectCollectionViewCell
         cell.backgroundColor = UIColor.cyan
         let project = projectsArray[indexPath.row]
-        cell.placeLabel.text = project.name
+        cell.headingProjectLabel.text = project.name
+        cell.placeLabel.text = project.location
+        cell.dateLabel.text = project.startDate! + "-" + project.endDate!
         return cell
     }
     
