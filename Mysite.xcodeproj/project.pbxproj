@@ -26,6 +26,7 @@
 		4750993A204D1528009E854D /* CoreDatahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509938204D1528009E854D /* CoreDatahandler.swift */; };
 		4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4750993B204D1667009E854D /* Mysite.xcdatamodeld */; };
 		47509941204D6CD3009E854D /* ProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509940204D6CD2009E854D /* ProjectCollectionViewCell.swift */; };
+		478CD8CA204FC97100C42767 /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478CD8C9204FC97100C42767 /* AddDocumentViewController.swift */; };
 		50967A1B202D5FF100114D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50967A19202D5FF100114D8A /* Main.storyboard */; };
 		50967A1D202D5FF100114D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50967A1C202D5FF100114D8A /* Assets.xcassets */; };
 		50967A20202D5FF100114D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50967A1E202D5FF100114D8A /* LaunchScreen.storyboard */; };
@@ -79,6 +80,7 @@
 		47509938204D1528009E854D /* CoreDatahandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDatahandler.swift; sourceTree = "<group>"; };
 		4750993C204D1667009E854D /* Mysite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mysite.xcdatamodel; sourceTree = "<group>"; };
 		47509940204D6CD2009E854D /* ProjectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		478CD8C9204FC97100C42767 /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
 		50967A12202D5FF100114D8A /* Mysite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mysite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50967A1A202D5FF100114D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50967A1C202D5FF100114D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				47509940204D6CD2009E854D /* ProjectCollectionViewCell.swift */,
 				47509910204D1344009E854D /* VideoLoadingVC.swift */,
 				D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */,
+				478CD8C9204FC97100C42767 /* AddDocumentViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				47509923204D1344009E854D /* LoginVO.swift in Sources */,
 				4750991F204D1344009E854D /* VideoLoadingVC.swift in Sources */,
 				47509924204D1344009E854D /* SignINpart.swift in Sources */,
+				478CD8CA204FC97100C42767 /* AddDocumentViewController.swift in Sources */,
 				4750991C204D1344009E854D /* engineerViewVC.swift in Sources */,
 				4750991D204D1344009E854D /* InsideProjectVC.swift in Sources */,
 				4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */,
@@ -811,7 +815,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVYK59KXPF;
+				DEVELOPMENT_TEAM = 7HWQXQBQLM;
 				INFOPLIST_FILE = Mysite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -828,7 +832,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVYK59KXPF;
+				DEVELOPMENT_TEAM = 7HWQXQBQLM;
 				INFOPLIST_FILE = Mysite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

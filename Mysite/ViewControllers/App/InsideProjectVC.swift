@@ -89,11 +89,10 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
         pin = AnnotationPin(title: "Abudhabi", Subtitle: "", coordinate: coordinate)
         
         mapView.addAnnotation(pin)
-        let pr = Float(selProject.progress!)
-        print(Float(pr!/100))
-        self.progress1.progress = Float(pr!/100)
-        self.progressperLabel.text = selProject.progress!+"%"
-        
+        if let pr = Float(selProject.progress!) {
+            self.progress1.progress = Float(pr/100)
+            self.progressperLabel.text = selProject.progress!+"%"
+        }
     }
     
 // Map and Pin Function Close
