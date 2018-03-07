@@ -40,6 +40,7 @@
 		D00A81D7204D8FFE00FF3CDD /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */; };
 		D00A81DA204D972900FF3CDD /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D9204D972900FF3CDD /* Projects.swift */; };
 		D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */; };
+		D0FC3CA22050A5FD00E47B22 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC3CA12050A5FD00E47B22 /* Stages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		D00A81D9204D972900FF3CDD /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		D0FC3CA12050A5FD00E47B22 /* Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stages.swift; sourceTree = "<group>"; };
 		E575F7DEA52E8EADF5D56907 /* Pods_MysiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MysiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 		4750992E204D1449009E854D /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
+				D0FC3CA02050A5E700E47B22 /* Stages */,
 				D00A81D8204D971000FF3CDD /* Projects */,
 				47509933204D146F009E854D /* UserDetails */,
 			);
@@ -319,6 +322,14 @@
 				D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */,
 			);
 			path = CoreDataHandler;
+			sourceTree = "<group>";
+		};
+		D0FC3CA02050A5E700E47B22 /* Stages */ = {
+			isa = PBXGroup;
+			children = (
+				D0FC3CA12050A5FD00E47B22 /* Stages.swift */,
+			);
+			path = Stages;
 			sourceTree = "<group>";
 		};
 		E56262E6F848102D227FCD15 /* Frameworks */ = {
@@ -646,6 +657,7 @@
 				4750991C204D1344009E854D /* engineerViewVC.swift in Sources */,
 				4730BD072050226800C38358 /* ProjectDetailTableViewCell.swift in Sources */,
 				4750991D204D1344009E854D /* InsideProjectVC.swift in Sources */,
+				D0FC3CA22050A5FD00E47B22 /* Stages.swift in Sources */,
 				4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */,
 				47509920204D1344009E854D /* introVC.swift in Sources */,
 				47509922204D1344009E854D /* LoginVC.swift in Sources */,

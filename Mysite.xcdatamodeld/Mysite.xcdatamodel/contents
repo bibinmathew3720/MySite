@@ -5,8 +5,18 @@
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="progress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Stages" representedClassName=".Stages" syncable="YES" codeGenerationType="category">
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="progress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeFrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeTo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workDetails" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="UserDetails" representedClassName=".UserDetails" syncable="YES" codeGenerationType="category">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,7 +27,8 @@
         <attribute name="userType" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Projects" positionX="-54" positionY="45" width="128" height="150"/>
         <element name="UserDetails" positionX="-54" positionY="9" width="128" height="135"/>
-        <element name="Projects" positionX="-54" positionY="45" width="128" height="135"/>
+        <element name="Stages" positionX="-54" positionY="72" width="128" height="150"/>
     </elements>
 </model>

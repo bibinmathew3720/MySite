@@ -19,6 +19,7 @@ class AddStageInsideVC: BaseViewController {
     @IBOutlet var workDetails: UITextField!
     @IBOutlet var pricingTextField: UITextField!
     
+    var stageDict:[String:AnyObject] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,10 +29,25 @@ class AddStageInsideVC: BaseViewController {
     @IBAction func addBTNpressed(_ sender: UIButton) {
 
         if(ValidateDetails()){
-            projectDetail["stageName"] = stageNameTextFeild.text as AnyObject
-            projectDetail["progress"] = progressTextField.text as AnyObject
-            Projects.saveProjectData(projectData: projectDetail as! Dictionary<String, String>)
+            stageDict["projectId"] = projectDetail["projectId"]
+            stageDict["stageName"] = stageNameTextFeild.text as AnyObject
+            stageDict["progress"] = progressTextField.text as AnyObject
+            stageDict["timeFrom"] = timeFromTextField.text as AnyObject
+            stageDict["timeTo"] = timeToTextField.text as AnyObject
+            stageDict["workDetails"] = workDetails.text as AnyObject
+            stageDict["price"] = pricingTextField.text as AnyObject
+            Stages.saveStageData(stageData: stageDict as! Dictionary<String, String>)
+            clearTextFields()
         }
+    }
+    
+    func clearTextFields(){
+        self.stageNameTextFeild.text = ""
+        self.progressTextField.text = ""
+        self.timeFromTextField.text = ""
+        self.timeToTextField.text = ""
+        self.workDetails.text = ""
+        self.pricingTextField.text = ""
     }
     
     

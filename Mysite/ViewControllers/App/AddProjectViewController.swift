@@ -30,6 +30,10 @@ class AddProjectViewController: BaseViewController {
             projectDict["startDate"] = self.startingDateTextFeild.text as AnyObject
             projectDict["endDate"] = self.endingDateTextFeild.text as AnyObject
             projectDict["location"] = self.locationTextFeild.text as AnyObject
+            let uuid = NSUUID().uuidString
+             projectDict["projectId"] = uuid as AnyObject
+            print(uuid)
+            Projects.saveProjectData(projectData: projectDict as! Dictionary<String, String>)
             performSegue(withIdentifier: "addProjectToNextPage", sender: nil)
         }
         
