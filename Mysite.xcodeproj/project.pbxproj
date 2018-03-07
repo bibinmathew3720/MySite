@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4730BD072050226800C38358 /* ProjectDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4730BD062050226800C38358 /* ProjectDetailTableViewCell.swift */; };
 		4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990B204D1344009E854D /* AddStageInsideVC.swift */; };
 		4750991B204D1344009E854D /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990C204D1344009E854D /* AnnotationPin.swift */; };
 		4750991C204D1344009E854D /* engineerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990D204D1344009E854D /* engineerViewVC.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		19469F21256E78E544F1ED06 /* Pods-MysiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		46323546D6F92A0C181CF886 /* Pods-MysiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteTests/Pods-MysiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		4730BD062050226800C38358 /* ProjectDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4750990B204D1344009E854D /* AddStageInsideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStageInsideVC.swift; sourceTree = "<group>"; };
 		4750990C204D1344009E854D /* AnnotationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
 		4750990D204D1344009E854D /* engineerViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = engineerViewVC.swift; sourceTree = "<group>"; };
@@ -163,12 +165,13 @@
 				4750990B204D1344009E854D /* AddStageInsideVC.swift */,
 				4750990C204D1344009E854D /* AnnotationPin.swift */,
 				4750990D204D1344009E854D /* engineerViewVC.swift */,
-				4750990E204D1344009E854D /* InsideProjectVC.swift */,
 				4750990F204D1344009E854D /* ProjectsVC.swift */,
 				47509940204D6CD2009E854D /* ProjectCollectionViewCell.swift */,
 				47509910204D1344009E854D /* VideoLoadingVC.swift */,
 				D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */,
 				478CD8C9204FC97100C42767 /* AddDocumentViewController.swift */,
+				4750990E204D1344009E854D /* InsideProjectVC.swift */,
+				4730BD062050226800C38358 /* ProjectDetailTableViewCell.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				47509924204D1344009E854D /* SignINpart.swift in Sources */,
 				478CD8CA204FC97100C42767 /* AddDocumentViewController.swift in Sources */,
 				4750991C204D1344009E854D /* engineerViewVC.swift in Sources */,
+				4730BD072050226800C38358 /* ProjectDetailTableViewCell.swift in Sources */,
 				4750991D204D1344009E854D /* InsideProjectVC.swift in Sources */,
 				4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */,
 				47509920204D1344009E854D /* introVC.swift in Sources */,

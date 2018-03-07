@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class InsideProjectVC: UIViewController, MKMapViewDelegate {
+class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate  {
     @IBOutlet weak var progressperLabel: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
@@ -30,15 +30,13 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var detailsSec5: [UIView]!
     
-    @IBOutlet weak var engineerView: UIView!
-    
-    @IBOutlet weak var ownerView: UIView!
+
     
     @IBOutlet weak var changeSeg: UISegmentedControl!
     
     @IBOutlet weak var dadyStackView: UIStackView!
     
-    @IBOutlet weak var scroolView: UIScrollView!
+    
     
     @IBOutlet weak var threedotICN: UIBarButtonItem!
     
@@ -66,8 +64,9 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var section1: UILabel!
     @IBOutlet weak var progress1: UIProgressView!
     
-    
-    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var engineerView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
    // Map and Pin Function Start
@@ -77,6 +76,11 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.engineerView.isHidden = true;
+        scrollView.isHidden = true
+        self.tableView.delegate=self;
+        self.tableView.dataSource=self;
         
         mapView.delegate = self
         
@@ -89,10 +93,10 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
         pin = AnnotationPin(title: "Abudhabi", Subtitle: "", coordinate: coordinate)
         
         mapView.addAnnotation(pin)
-        if let pr = Float(selProject.progress!) {
-            self.progress1.progress = Float(pr/100)
-            self.progressperLabel.text = selProject.progress!+"%"
-        }
+//        if let pr = Float(selProject.progress!) {
+//            self.progress1.progress = Float(pr/100)
+//            self.progressperLabel.text = selProject.progress!+"%"
+//        }
     }
     
 // Map and Pin Function Close
@@ -190,31 +194,25 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
     @IBAction func ValueChangedSeg(_ sender: UISegmentedControl) {
         if changeSeg.selectedSegmentIndex == 0{
             
-            scroolView.isScrollEnabled = true
-            dadyStackView.isHidden = false
-            ownerView.isHidden = true
+//            scroolView.isScrollEnabled = true
+            tableView.isHidden = false
+           // ownerView.isHidden = true
             engineerView.isHidden = true
+            scrollView.isHidden = true
             
             
         }else if changeSeg.selectedSegmentIndex == 1{
             
-            scroolView.isScrollEnabled = false
-            let desiredOffset = CGPoint(x: 0, y: -self.scroolView.contentInset.top)
-            self.scroolView.setContentOffset(desiredOffset, animated: false)
-            dadyStackView.isHidden = true
-            ownerView.isHidden = true
+
+            tableView.isHidden = true
             engineerView.isHidden = false
-            
+            scrollView.isHidden = false
            
             
         }else if changeSeg.selectedSegmentIndex == 2{
-            
-            scroolView.isScrollEnabled = false
-            let desiredOffset = CGPoint(x: 0, y: -self.scroolView.contentInset.top)
-            self.scroolView.setContentOffset(desiredOffset, animated: false)
-            dadyStackView.isHidden = true
-            ownerView.isHidden = false
-            engineerView.isHidden = true
+            tableView.isHidden = true
+            engineerView.isHidden = false
+            scrollView.isHidden = false
             
         }
         
@@ -257,6 +255,45 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate {
         
         
         
+    }
+    
+    
+    
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //Update Code
+    
+    
+    
+    // MARK: Table View Delegate
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 20//self.dataArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectDetailCell", for: indexPath) as! ProjectDetailTableViewCell
+//        let data:NSDictionary = self.dataArray[indexPath.section] as! NSDictionary
+//        cell.captionLabel.text = data.value(forKey: "caption") as? String;
+//        cell.itemImage.sd_setImage(with: URL(string:(data.value(forKey: "imageUrl") as? String)!), placeholderImage: UIImage(named: "noImage"))
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView=UIView()
+        headerView.backgroundColor=UIColor.clear
+        return headerView
     }
     
     
