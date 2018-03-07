@@ -76,7 +76,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        populateStages()
         self.engineerView.isHidden = true;
         scrollView.isHidden = true
         self.tableView.delegate=self;
@@ -97,6 +97,11 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
 //            self.progress1.progress = Float(pr/100)
 //            self.progressperLabel.text = selProject.progress!+"%"
 //        }
+    }
+    
+    func populateStages(){
+        let stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
+        print(stagesArray)
     }
     
 // Map and Pin Function Close

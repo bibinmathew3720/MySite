@@ -21,4 +21,10 @@ class Stages: NSManagedObject {
         stage?.price = stageData["price"]
         CoreDataHandler.sharedInstance.saveContext()
     }
+    
+    static func getStagesOfProject(projectId:String)->Array<Stages>{
+        let predicate = NSPredicate(format: "projectId==%@", projectId)
+         let stages = CoreDataHandler.sharedInstance.getAllDatasWithPredicate(entity: "Stages", predicate:predicate , sortDescriptor: nil)
+        return stages as! Array<Stages>
+    }
 }
