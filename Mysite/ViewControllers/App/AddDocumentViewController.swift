@@ -9,6 +9,8 @@
 import UIKit
 
 class AddDocumentViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    var projectDetail:[String:AnyObject] = [:]
+    
     @IBOutlet var documentImageView: UIImageView!
     @IBOutlet var documentDetails: UITextField!
     @IBOutlet var documentName: UITextField!
@@ -25,7 +27,10 @@ class AddDocumentViewController: UIViewController, UINavigationControllerDelegat
     }
     
     @IBAction func SubmitButtonAction(_ sender: Any) {
+        let imageIdentifier = projectDetail["projectId"] as! String + ".jpg"
+        Utilities().saveImageDocumentDirectory(image: documentImageView.image!, identifier: imageIdentifier)
         
+        print(Utilities().getImage(identifier: imageIdentifier))
         self.navigationController?.popToRootViewController(animated: true)
     }
     

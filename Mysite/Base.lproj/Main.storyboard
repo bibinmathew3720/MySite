@@ -977,7 +977,7 @@
                                 </state>
                                 <connections>
                                     <action selector="NextButtonAction:" destination="Hmd-ar-bj1" eventType="touchUpInside" id="Veh-dF-Pn2"/>
-                                    <segue destination="RyZ-BM-9XE" kind="show" id="9wq-0G-GN7"/>
+                                    <segue destination="RyZ-BM-9XE" kind="show" identifier="stageToDocumentsPage" id="9wq-0G-GN7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLf-PC-iTt">
@@ -2250,14 +2250,14 @@
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-57-Rqa">
-                                <rect key="frame" x="320" y="273" width="33" height="33"/>
+                                <rect key="frame" x="342" y="273" width="33" height="33"/>
                                 <state key="normal" image="mapTOpic ICN"/>
                                 <connections>
                                     <action selector="MaptoPicBTn:" destination="mgp-K0-rod" eventType="touchUpInside" id="93N-kW-P9E"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjP-iL-Bas">
-                                <rect key="frame" x="324" y="275" width="24" height="32"/>
+                                <rect key="frame" x="351" y="275" width="24" height="32"/>
                                 <state key="normal" image="picTOmap ICN"/>
                                 <connections>
                                     <action selector="PictoMapBTN:" destination="mgp-K0-rod" eventType="touchUpInside" id="RnI-Vh-nOD"/>
@@ -2267,35 +2267,35 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="247"/>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-bX-24O">
-                                <rect key="frame" x="219" y="64" width="156" height="182"/>
+                                <rect key="frame" x="235" y="64" width="156" height="182"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navDrop" translatesAutoresizingMaskIntoConstraints="NO" id="EHU-lz-N9w">
                                         <rect key="frame" x="0.0" y="0.0" width="156" height="182"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPi-Z1-f9j">
-                                        <rect key="frame" x="8" y="75" width="140" height="30"/>
+                                        <rect key="frame" x="0.0" y="75" width="140" height="30"/>
                                         <state key="normal" title="Payments"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dby-Hs-uEE">
-                                        <rect key="frame" x="8" y="42" width="140" height="30"/>
+                                        <rect key="frame" x="0.0" y="42" width="140" height="30"/>
                                         <state key="normal" title="Agreements"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-dd-IU5">
-                                        <rect key="frame" x="8" y="9" width="140" height="30"/>
+                                        <rect key="frame" x="0.0" y="9" width="140" height="30"/>
                                         <state key="normal" title="Documents"/>
                                         <connections>
                                             <segue destination="A8f-6B-cpe" kind="show" id="n9j-cD-Evd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRj-Za-BV1">
-                                        <rect key="frame" x="8" y="139" width="140" height="30"/>
+                                        <rect key="frame" x="0.0" y="139" width="140" height="30"/>
                                         <state key="normal" title="Video"/>
                                         <connections>
                                             <segue destination="XaP-8B-oHr" kind="show" id="6k3-gR-ibf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQS-ua-Wbd">
-                                        <rect key="frame" x="8" y="107" width="140" height="30"/>
+                                        <rect key="frame" x="0.0" y="107" width="140" height="30"/>
                                         <state key="normal" title="Request"/>
                                     </button>
                                 </subviews>

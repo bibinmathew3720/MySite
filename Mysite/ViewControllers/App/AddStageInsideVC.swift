@@ -79,5 +79,12 @@ class AddStageInsideVC: BaseViewController {
         }
         return isValid
     }
+    //stageToDocumentsPage
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "stageToDocumentsPage"){
+            let documentPage = segue.destination as! AddDocumentViewController
+            documentPage.projectDetail = self.projectDetail
+        }
+    }
     
 }

@@ -11,20 +11,19 @@ import UIKit
 class Utilities: NSObject {
     func saveImageDocumentDirectory(image:UIImage,identifier:String){
         let fileManager = FileManager.default
-        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("apple.jpg")
-        let image = UIImage(named: "HOMI2.jpg")
+        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(identifier)
         print(paths)
-        let imageData = UIImageJPEGRepresentation(image!, 0.5)
+        let imageData = UIImageJPEGRepresentation(image, 0.5)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
     }
     
     func getImage(identifier:String)->UIImage{
         let fileManager = FileManager.default
-        let imagePAth = (self.getDirectoryPath() as NSString).appendingPathComponent("apple.jpg")
+        let imagePAth = (self.getDirectoryPath() as NSString).appendingPathComponent(identifier)
         if fileManager.fileExists(atPath: imagePAth){
             return UIImage(contentsOfFile: imagePAth)!
         }else{
-            return UIImage.init(named: "HOMI2.jpg")!
+            return UIImage.init(named: "architecture-modern-residence3-1000x450")!
         }
     }
     

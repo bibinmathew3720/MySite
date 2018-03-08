@@ -51,6 +51,8 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
         cell.headingProjectLabel.text = project.name
         cell.placeLabel.text = project.location
         cell.dateLabel.text = project.startDate! + "-" + project.endDate!
+        let imageIdentifier = project.projectId! + ".jpg"
+        cell.peoductImageView.image = Utilities().getImage(identifier: imageIdentifier)
         return cell
     }
     
