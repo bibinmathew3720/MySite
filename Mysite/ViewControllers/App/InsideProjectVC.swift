@@ -74,6 +74,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var engineerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contractorView: UIScrollView!
     
     var stagesArray = [Stages]()
    // Map and Pin Function Start
@@ -203,11 +204,12 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     @IBAction func ValueChangedSeg(_ sender: UISegmentedControl) {
         if changeSeg.selectedSegmentIndex == 0{
             
-//            scroolView.isScrollEnabled = true
+
             tableView.isHidden = false
-           // ownerView.isHidden = true
             engineerView.isHidden = true
             scrollView.isHidden = true
+            
+            contractorView.isHidden = true
             
             
         }else if changeSeg.selectedSegmentIndex == 1{
@@ -216,12 +218,14 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
             tableView.isHidden = true
             engineerView.isHidden = false
             scrollView.isHidden = false
+            contractorView.isHidden = true
            
             
         }else if changeSeg.selectedSegmentIndex == 2{
             tableView.isHidden = true
-            engineerView.isHidden = false
-            scrollView.isHidden = false
+            engineerView.isHidden = true
+            scrollView.isHidden = true
+            contractorView.isHidden = false
             
         }
         
