@@ -83,7 +83,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateStages()
+        populatPrjectDetails()
         self.engineerView.isHidden = true;
         scrollView.isHidden = true
         self.tableView.delegate=self;
@@ -106,12 +106,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
 //        }
     }
     
-    func populateStages(){
-        print(selProject.documentName)
-         print(selProject.documentDetail)
-        stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
-        print(stagesArray)
-    }
+    
     
 // Map and Pin Function Close
     
@@ -284,6 +279,16 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
 //        progress1.progress = (eprogress1.text! as NSString).floatValue
     }
     
+    func populatPrjectDetails(){
+        stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
+        let project = Projects.getProjectData(projectId: selProject.projectId!)
+        self.nameTF.text = project.engName
+        self.locationTF.text = project.engLocation
+        self.projectTF.text = project.engProject
+        self.emailTF.text = project.engEmail
+        self.phTF.text = project.engPhone
+    }
+    
     
     
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -291,7 +296,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     
     
     
-    // MARK: Table View Delegate
+    // MARK: Table View Datasources
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return stagesArray.count
@@ -304,9 +309,6 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectDetailCell", for: indexPath) as! ProjectDetailTableViewCell
         cell.setStageDetails(stageDetail: stagesArray[indexPath.section])
-//        let data:NSDictionary = self.dataArray[indexPath.section] as! NSDictionary
-//        cell.captionLabel.text = data.value(forKey: "caption") as? String;
-//        cell.itemImage.sd_setImage(with: URL(string:(data.value(forKey: "imageUrl") as? String)!), placeholderImage: UIImage(named: "noImage"))
         return cell
     }
     

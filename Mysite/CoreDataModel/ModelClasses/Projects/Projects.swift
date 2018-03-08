@@ -62,4 +62,11 @@ class Projects: NSManagedObject {
         project.conPhone = engConDetails["conPhone"]
         CoreDataHandler.sharedInstance.saveContext()
     }
+    
+    static func getProjectData(projectId:String)->(Projects){
+        let predicate = NSPredicate(format: "projectId ==%@",projectId)
+        let projects = CoreDataHandler.sharedInstance.getAllDatasWithPredicate(entity: "Projects", predicate:predicate , sortDescriptor: nil)
+        let project = projects.first as! Projects
+        return project;
+    }
 }
