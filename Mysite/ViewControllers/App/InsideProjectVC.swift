@@ -40,9 +40,15 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var threedotICN: UIBarButtonItem!
     
+    @IBOutlet weak var phTF: UITextField!
+    @IBOutlet weak var projectTF: UITextField!
+    @IBOutlet weak var locationTF: UITextField!
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var stagesTableView: UITableView!
     @IBOutlet weak var navDropfrom3dot: UIView!
     var selProject:Projects!
+    var projectDict:[String:AnyObject] = [:]
     @IBAction func DotBTN(_ sender: UIBarButtonItem) {
         
         if navDropfrom3dot.isHidden == true{
@@ -101,6 +107,8 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     }
     
     func populateStages(){
+        print(selProject.documentName)
+         print(selProject.documentDetail)
         stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
         print(stagesArray)
     }
@@ -242,25 +250,38 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     }
     
     @IBAction func navDoneBTN(_ sender: UIBarButtonItem) {
+        
+        //Engineer Details
+        projectDict ["engName"] = self.nameTF.text as AnyObject
+        projectDict ["engLocation"] = self.locationTF.text as AnyObject
+        projectDict ["engProject"] = self.projectTF.text as AnyObject
+        projectDict ["engEmail"] = self.emailTF.text as AnyObject
+        projectDict ["engPhone"] = self.phTF.text as AnyObject
+        
+        //Contractor Details
+        
+        projectDict ["conName"] = self.nameTF.text as AnyObject
+        projectDict ["conLocation"] = self.locationTF.text as AnyObject
+        projectDict ["conProject"] = self.projectTF.text as AnyObject
+        projectDict ["conEmail"] = self.emailTF.text as AnyObject
+        projectDict ["conPhone"] = self.phTF.text as AnyObject
+        
+        Projects.updateEngineerContractorDetails(engConDetails: projectDict as! Dictionary<String, String>, projectId: self.selProject.projectId!)
+       // self.selProject[""] = 
        
-        // first view hiding and viewing
-        stage1.isHidden = false
-        section1.isHidden = false
-        progress1.isHidden = false
-        // hiding section completed
-        estage1.isHidden = true
-        eSection1.isHidden = true
-        eprogress1.isHidden = true
-        //view section completed
-        
-        stage1.text = estage1.text
-        section1.text = eSection1.text
-        progress1.progress = (eprogress1.text! as NSString).floatValue
-        
-        
-        
-        
-        
+//        // first view hiding and viewing
+//        stage1.isHidden = false
+//        section1.isHidden = false
+//        progress1.isHidden = false
+//        // hiding section completed
+//        estage1.isHidden = true
+//        eSection1.isHidden = true
+//        eprogress1.isHidden = true
+//        //view section completed
+//
+//        stage1.text = estage1.text
+//        section1.text = eSection1.text
+//        progress1.progress = (eprogress1.text! as NSString).floatValue
     }
     
     
@@ -301,6 +322,12 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
         let headerView=UIView()
         headerView.backgroundColor=UIColor.clear
         return headerView
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "projectDetailToDocuments"){
+            
+        }
     }
     
     

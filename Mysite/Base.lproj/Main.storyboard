@@ -1717,9 +1717,14 @@
                         <outlet property="MaptoPicICN" destination="WS1-sN-CGb" id="XaJ-4o-elq"/>
                         <outlet property="PictoMapICN" destination="X17-Yx-6VK" id="hnI-ce-Vrj"/>
                         <outlet property="changeSeg" destination="LVY-0Q-p7P" id="7y1-A3-xDt"/>
+                        <outlet property="emailTF" destination="Aad-E9-Owi" id="U3J-ae-hC1"/>
                         <outlet property="engineerView" destination="a47-kN-AZz" id="TI3-xx-nuA"/>
+                        <outlet property="locationTF" destination="fjF-U8-V9g" id="dtM-yY-4Il"/>
                         <outlet property="mapView" destination="fAD-d2-Ey9" id="lSg-w7-URM"/>
+                        <outlet property="nameTF" destination="ta0-5b-gyw" id="gku-hN-u7N"/>
                         <outlet property="navDropfrom3dot" destination="FxK-dt-HR2" id="6th-SC-nBj"/>
+                        <outlet property="phTF" destination="TX7-Zq-6wf" id="aRO-ZV-zAA"/>
+                        <outlet property="projectTF" destination="P4d-fi-2cy" id="7Ku-Bc-OM7"/>
                         <outlet property="scrollView" destination="Wku-ch-xbR" id="WvK-TP-7rn"/>
                         <outlet property="stagesTableView" destination="8Iw-tc-jTH" id="aKn-t2-xtZ"/>
                         <outlet property="tableView" destination="8Iw-tc-jTH" id="fNm-tt-RFv"/>
@@ -2284,7 +2289,7 @@
                                         <rect key="frame" x="0.0" y="9" width="140" height="30"/>
                                         <state key="normal" title="Documents"/>
                                         <connections>
-                                            <segue destination="A8f-6B-cpe" kind="show" id="n9j-cD-Evd"/>
+                                            <segue destination="A8f-6B-cpe" kind="show" identifier="projectDetailToDocuments" id="n9j-cD-Evd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRj-Za-BV1">
