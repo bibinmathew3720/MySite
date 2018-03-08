@@ -13,6 +13,13 @@ class ProjectDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var projectDetailLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var dateFromToLabel: UILabel!
+    @IBOutlet weak var workDetailsLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +30,12 @@ class ProjectDetailTableViewCell: UITableViewCell {
             self.progressView.progress = Float(pr/100)
             self.progressLabel.text = stageDetail.progress!+"%"
         }
-        self.projectDetailLabel.text = stageDetail.workDetails
+       // self.projectDetailLabel.text = stageDetail.workDetails
+        
+        let data = stageDetail.timeFrom! + stageDetail.timeTo!
+        self.dateFromToLabel.text = data
+        self.workDetailsLabel.text = stageDetail.workDetails
+        self.priceLabel.text = stageDetail.price
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

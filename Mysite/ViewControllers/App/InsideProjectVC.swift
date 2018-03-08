@@ -11,52 +11,24 @@ import MapKit
 
 class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate  {
     @IBOutlet weak var progressperLabel: UILabel!
-    
     @IBOutlet weak var mapView: MKMapView!
-    
     @IBOutlet weak var LocImageView: UIImageView!
-    
     @IBOutlet weak var MaptoPicICN: UIButton!
-    
     @IBOutlet weak var PictoMapICN: UIButton!
-    
     @IBOutlet var detailsSec: [UIView]!
-    
     @IBOutlet var detailsSec2: [UIView]!
-    
     @IBOutlet var detailsSec3: [UIView]!
-    
     @IBOutlet var detailsSec4: [UIView]!
-    
     @IBOutlet var detailsSec5: [UIView]!
-    
-
-    
     @IBOutlet weak var changeSeg: UISegmentedControl!
-    
     @IBOutlet weak var dadyStackView: UIStackView!
-    
-    
-    
     @IBOutlet weak var threedotICN: UIBarButtonItem!
-    
     @IBOutlet weak var stagesTableView: UITableView!
     @IBOutlet weak var navDropfrom3dot: UIView!
     var selProject:Projects!
-    @IBAction func DotBTN(_ sender: UIBarButtonItem) {
-        
-        if navDropfrom3dot.isHidden == true{
-            navDropfrom3dot.isHidden = false
-        }else if navDropfrom3dot.isHidden == false{
-            navDropfrom3dot.isHidden = true
-        }
-        
-    }
-    
-    
-    
-    
+
     // Second outlet view part
+    
    // frist stack view outlets
     @IBOutlet weak var estage1: UITextField!
     @IBOutlet weak var eSection1: UITextField!
@@ -70,7 +42,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     @IBOutlet weak var scrollView: UIScrollView!
     
     var stagesArray = [Stages]()
-   // Map and Pin Function Start
+
     
     var pin:AnnotationPin!
 
@@ -103,6 +75,14 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     func populateStages(){
         stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
         print(stagesArray)
+    }
+    
+    @IBAction func DotBTN(_ sender: UIBarButtonItem) {
+        if navDropfrom3dot.isHidden == true{
+            navDropfrom3dot.isHidden = false
+        }else if navDropfrom3dot.isHidden == false{
+            navDropfrom3dot.isHidden = true
+        }
     }
     
 // Map and Pin Function Close
@@ -283,18 +263,15 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectDetailCell", for: indexPath) as! ProjectDetailTableViewCell
         cell.setStageDetails(stageDetail: stagesArray[indexPath.section])
-//        let data:NSDictionary = self.dataArray[indexPath.section] as! NSDictionary
-//        cell.captionLabel.text = data.value(forKey: "caption") as? String;
-//        cell.itemImage.sd_setImage(with: URL(string:(data.value(forKey: "imageUrl") as? String)!), placeholderImage: UIImage(named: "noImage"))
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 220
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 10
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -302,9 +279,6 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
         headerView.backgroundColor=UIColor.clear
         return headerView
     }
-    
-    
-    
     
 }
 
