@@ -13,10 +13,18 @@ class ShowDocumentViewController: UIViewController {
     @IBOutlet weak var documentName: UILabel!
     @IBOutlet weak var documentImageView: UIImageView!
     @IBOutlet weak var documentDetails: UILabel!
-    
+    var projectId:String!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        populateDocumentDetails()
+    }
+    
+    func populateDocumentDetails(){
+        let project = Projects.getProjectData(projectId: projectId!)
+        self.documentName.text = project.documentName
+        self.documentDetails.text = project.documentDetail
+        let imageIdentifier = project.projectId! + ".jpg"
+        self.documentImageView.image = Utilities().getImage(identifier: imageIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
