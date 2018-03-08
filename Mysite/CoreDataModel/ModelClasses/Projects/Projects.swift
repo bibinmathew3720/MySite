@@ -32,4 +32,13 @@ class Projects: NSManagedObject {
         }
         
     }
+    
+    static func updateDocumentDetails(projectData:Dictionary<String, String>){
+        let predicate = NSPredicate(format: "projectId ==%@",projectData["projectId"]!)
+        let projects = CoreDataHandler.sharedInstance.getAllDatasWithPredicate(entity: "Projects", predicate:predicate , sortDescriptor: nil)
+        let project = projects.first as! Projects
+        project.documentName = projectData["documentName"]
+        project.documentDetail = projectData["documentDetail"]
+        CoreDataHandler.sharedInstance.saveContext()
+    }
 }

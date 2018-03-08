@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddDocumentViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class AddDocumentViewController: BaseViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     var projectDetail:[String:AnyObject] = [:]
     
     @IBOutlet var documentImageView: UIImageView!
@@ -27,11 +27,31 @@ class AddDocumentViewController: UIViewController, UINavigationControllerDelegat
     }
     
     @IBAction func SubmitButtonAction(_ sender: Any) {
-        let imageIdentifier = projectDetail["projectId"] as! String + ".jpg"
-        Utilities().saveImageDocumentDirectory(image: documentImageView.image!, identifier: imageIdentifier)
-        
-        print(Utilities().getImage(identifier: imageIdentifier))
-        self.navigationController?.popToRootViewController(animated: true)
+        if(ValidateDetails()){
+            let imageIdentifier = projectDetail["projectId"] as! String + ".jpg"
+            Utilities().saveImageDocumentDirectory(image: documentImageView.image!, identifier: imageIdentifier)
+            print(Utilities().getImage(identifier: imageIdentifier))
+            projectDetail["documentName"] = self.documentName.text as AnyObject
+            projectDetail["documentDetail"] = self.documentDetails.text as AnyObject
+            Projects.updateDocumentDetails(projectData: projectDetail as! Dictionary<String, String>)
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    func ValidateDetails() -> Bool {
+        var isValid:Bool = false
+        var messageString:String?
+        if(self.documentName.text?.isEmpty)! {
+            messageString = "Please enter document name"
+        } else if(self.documentDetails.text?.isEmpty)! {
+            messageString = "Please enter document details"
+        } else {
+            isValid = true
+        }
+        if !isValid {
+            self.showAlertWithMessage(alertMessage: messageString!)
+        }
+        return isValid
     }
     
    //MARK: - Take image
