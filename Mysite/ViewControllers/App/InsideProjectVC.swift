@@ -40,6 +40,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var threedotICN: UIBarButtonItem!
     
+    @IBOutlet weak var stagesTableView: UITableView!
     @IBOutlet weak var navDropfrom3dot: UIView!
     var selProject:Projects!
     @IBAction func DotBTN(_ sender: UIBarButtonItem) {
@@ -68,7 +69,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     @IBOutlet weak var engineerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    
+    var stagesArray = [Stages]()
    // Map and Pin Function Start
     
     var pin:AnnotationPin!
@@ -100,7 +101,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     }
     
     func populateStages(){
-        let stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
+        stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
         print(stagesArray)
     }
     
@@ -272,7 +273,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     // MARK: Table View Delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20//self.dataArray.count
+        return stagesArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -281,6 +282,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectDetailCell", for: indexPath) as! ProjectDetailTableViewCell
+        cell.setStageDetails(stageDetail: stagesArray[indexPath.section])
 //        let data:NSDictionary = self.dataArray[indexPath.section] as! NSDictionary
 //        cell.captionLabel.text = data.value(forKey: "caption") as? String;
 //        cell.itemImage.sd_setImage(with: URL(string:(data.value(forKey: "imageUrl") as? String)!), placeholderImage: UIImage(named: "noImage"))
