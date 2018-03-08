@@ -11,24 +11,58 @@ import MapKit
 
 class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate  {
     @IBOutlet weak var progressperLabel: UILabel!
+    
     @IBOutlet weak var mapView: MKMapView!
+    
     @IBOutlet weak var LocImageView: UIImageView!
+    
     @IBOutlet weak var MaptoPicICN: UIButton!
+    
     @IBOutlet weak var PictoMapICN: UIButton!
+    
     @IBOutlet var detailsSec: [UIView]!
+    
     @IBOutlet var detailsSec2: [UIView]!
+    
     @IBOutlet var detailsSec3: [UIView]!
+    
     @IBOutlet var detailsSec4: [UIView]!
+    
     @IBOutlet var detailsSec5: [UIView]!
+    
+
+    
     @IBOutlet weak var changeSeg: UISegmentedControl!
+    
     @IBOutlet weak var dadyStackView: UIStackView!
+    
+    
+    
     @IBOutlet weak var threedotICN: UIBarButtonItem!
+    
+    @IBOutlet weak var phTF: UITextField!
+    @IBOutlet weak var projectTF: UITextField!
+    @IBOutlet weak var locationTF: UITextField!
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var stagesTableView: UITableView!
     @IBOutlet weak var navDropfrom3dot: UIView!
     var selProject:Projects!
-
-    // Second outlet view part
+    var projectDict:[String:AnyObject] = [:]
+    @IBAction func DotBTN(_ sender: UIBarButtonItem) {
+        
+        if navDropfrom3dot.isHidden == true{
+            navDropfrom3dot.isHidden = false
+        }else if navDropfrom3dot.isHidden == false{
+            navDropfrom3dot.isHidden = true
+        }
+        
+    }
     
+    
+    
+    
+    // Second outlet view part
    // frist stack view outlets
     @IBOutlet weak var estage1: UITextField!
     @IBOutlet weak var eSection1: UITextField!
@@ -42,14 +76,14 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     @IBOutlet weak var scrollView: UIScrollView!
     
     var stagesArray = [Stages]()
-
+   // Map and Pin Function Start
     
     var pin:AnnotationPin!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateStages()
+        populatPrjectDetails()
         self.engineerView.isHidden = true;
         scrollView.isHidden = true
         self.tableView.delegate=self;
@@ -72,18 +106,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
 //        }
     }
     
-    func populateStages(){
-        stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
-        print(stagesArray)
-    }
     
-    @IBAction func DotBTN(_ sender: UIBarButtonItem) {
-        if navDropfrom3dot.isHidden == true{
-            navDropfrom3dot.isHidden = false
-        }else if navDropfrom3dot.isHidden == false{
-            navDropfrom3dot.isHidden = true
-        }
-    }
     
 // Map and Pin Function Close
     
@@ -222,25 +245,48 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     }
     
     @IBAction func navDoneBTN(_ sender: UIBarButtonItem) {
+        
+        //Engineer Details
+        projectDict ["engName"] = self.nameTF.text as AnyObject
+        projectDict ["engLocation"] = self.locationTF.text as AnyObject
+        projectDict ["engProject"] = self.projectTF.text as AnyObject
+        projectDict ["engEmail"] = self.emailTF.text as AnyObject
+        projectDict ["engPhone"] = self.phTF.text as AnyObject
+        
+        //Contractor Details
+        
+        projectDict ["conName"] = self.nameTF.text as AnyObject
+        projectDict ["conLocation"] = self.locationTF.text as AnyObject
+        projectDict ["conProject"] = self.projectTF.text as AnyObject
+        projectDict ["conEmail"] = self.emailTF.text as AnyObject
+        projectDict ["conPhone"] = self.phTF.text as AnyObject
+        
+        Projects.updateEngineerContractorDetails(engConDetails: projectDict as! Dictionary<String, String>, projectId: self.selProject.projectId!)
+       // self.selProject[""] = 
        
-        // first view hiding and viewing
-        stage1.isHidden = false
-        section1.isHidden = false
-        progress1.isHidden = false
-        // hiding section completed
-        estage1.isHidden = true
-        eSection1.isHidden = true
-        eprogress1.isHidden = true
-        //view section completed
-        
-        stage1.text = estage1.text
-        section1.text = eSection1.text
-        progress1.progress = (eprogress1.text! as NSString).floatValue
-        
-        
-        
-        
-        
+//        // first view hiding and viewing
+//        stage1.isHidden = false
+//        section1.isHidden = false
+//        progress1.isHidden = false
+//        // hiding section completed
+//        estage1.isHidden = true
+//        eSection1.isHidden = true
+//        eprogress1.isHidden = true
+//        //view section completed
+//
+//        stage1.text = estage1.text
+//        section1.text = eSection1.text
+//        progress1.progress = (eprogress1.text! as NSString).floatValue
+    }
+    
+    func populatPrjectDetails(){
+        stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
+        let project = Projects.getProjectData(projectId: selProject.projectId!)
+        self.nameTF.text = project.engName
+        self.locationTF.text = project.engLocation
+        self.projectTF.text = project.engProject
+        self.emailTF.text = project.engEmail
+        self.phTF.text = project.engPhone
     }
     
     
@@ -250,7 +296,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     
     
     
-    // MARK: Table View Delegate
+    // MARK: Table View Datasources
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return stagesArray.count
@@ -267,11 +313,11 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
+        return 150
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 30
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -279,6 +325,15 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
         headerView.backgroundColor=UIColor.clear
         return headerView
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "projectDetailToDocuments"){
+            
+        }
+    }
+    
+    
+    
     
 }
 

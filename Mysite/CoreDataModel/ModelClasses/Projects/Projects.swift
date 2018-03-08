@@ -41,4 +41,32 @@ class Projects: NSManagedObject {
         project.documentDetail = projectData["documentDetail"]
         CoreDataHandler.sharedInstance.saveContext()
     }
+    
+    static func updateEngineerContractorDetails(engConDetails:Dictionary<String, String>,projectId:String){
+        let predicate = NSPredicate(format: "projectId ==%@",projectId)
+        let projects = CoreDataHandler.sharedInstance.getAllDatasWithPredicate(entity: "Projects", predicate:predicate , sortDescriptor: nil)
+        let project = projects.first as! Projects
+        
+        //Saving Engineer Details
+        project.engName = engConDetails["engName"]
+        project.engLocation = engConDetails["engLocation"]
+        project.engProject = engConDetails["engProject"]
+        project.engEmail = engConDetails["engEmail"]
+        project.engPhone = engConDetails["engPhone"]
+        
+        //Saving Contractor Details
+        project.conName = engConDetails["conName"]
+        project.conLocation = engConDetails["conLocation"]
+        project.conProject = engConDetails["conProject"]
+        project.conEmail = engConDetails["conEmail"]
+        project.conPhone = engConDetails["conPhone"]
+        CoreDataHandler.sharedInstance.saveContext()
+    }
+    
+    static func getProjectData(projectId:String)->(Projects){
+        let predicate = NSPredicate(format: "projectId ==%@",projectId)
+        let projects = CoreDataHandler.sharedInstance.getAllDatasWithPredicate(entity: "Projects", predicate:predicate , sortDescriptor: nil)
+        let project = projects.first as! Projects
+        return project;
+    }
 }
