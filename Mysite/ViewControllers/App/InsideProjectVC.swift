@@ -45,6 +45,12 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     @IBOutlet weak var locationTF: UITextField!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
+    
+    @IBOutlet weak var conNameTF: UITextField!
+    @IBOutlet weak var conLocationTF: UITextField!
+    @IBOutlet weak var conProjectTF: UITextField!
+    @IBOutlet weak var conEmailTF: UITextField!
+    @IBOutlet weak var conPhoneTF: UITextField!
     @IBOutlet weak var stagesTableView: UITableView!
     @IBOutlet weak var navDropfrom3dot: UIView!
     var selProject:Projects!
@@ -250,37 +256,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     
     @IBAction func navDoneBTN(_ sender: UIBarButtonItem) {
         
-        //Engineer Details
-        projectDict ["engName"] = self.nameTF.text as AnyObject
-        projectDict ["engLocation"] = self.locationTF.text as AnyObject
-        projectDict ["engProject"] = self.projectTF.text as AnyObject
-        projectDict ["engEmail"] = self.emailTF.text as AnyObject
-        projectDict ["engPhone"] = self.phTF.text as AnyObject
-        
-        //Contractor Details
-        
-        projectDict ["conName"] = self.nameTF.text as AnyObject
-        projectDict ["conLocation"] = self.locationTF.text as AnyObject
-        projectDict ["conProject"] = self.projectTF.text as AnyObject
-        projectDict ["conEmail"] = self.emailTF.text as AnyObject
-        projectDict ["conPhone"] = self.phTF.text as AnyObject
-        
-        Projects.updateEngineerContractorDetails(engConDetails: projectDict as! Dictionary<String, String>, projectId: self.selProject.projectId!)
-       // self.selProject[""] = 
-       
-//        // first view hiding and viewing
-//        stage1.isHidden = false
-//        section1.isHidden = false
-//        progress1.isHidden = false
-//        // hiding section completed
-//        estage1.isHidden = true
-//        eSection1.isHidden = true
-//        eprogress1.isHidden = true
-//        //view section completed
-//
-//        stage1.text = estage1.text
-//        section1.text = eSection1.text
-//        progress1.progress = (eprogress1.text! as NSString).floatValue
+       saveProjectDetails()
     }
     
     func populatPrjectDetails(){
@@ -291,8 +267,36 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
         self.projectTF.text = project.engProject
         self.emailTF.text = project.engEmail
         self.phTF.text = project.engPhone
+        self.conNameTF.text = project.conName
+        self.conLocationTF.text = project.conLocation
+        self.conProjectTF.text = project.conProject
+        self.conEmailTF.text = project.conEmail
+        self.conPhoneTF.text = project.conPhone
     }
     
+    
+    @IBAction func submitButtonAction(_ sender: UIButton) {
+      saveProjectDetails()
+    }
+    
+    func saveProjectDetails(){
+        //Engineer Details
+        projectDict ["engName"] = self.nameTF.text as AnyObject
+        projectDict ["engLocation"] = self.locationTF.text as AnyObject
+        projectDict ["engProject"] = self.projectTF.text as AnyObject
+        projectDict ["engEmail"] = self.emailTF.text as AnyObject
+        projectDict ["engPhone"] = self.phTF.text as AnyObject
+        
+        //Contractor Details
+        
+        projectDict ["conName"] = self.conNameTF.text as AnyObject
+        projectDict ["conLocation"] = self.conLocationTF.text as AnyObject
+        projectDict ["conProject"] = self.conProjectTF.text as AnyObject
+        projectDict ["conEmail"] = self.conEmailTF.text as AnyObject
+        projectDict ["conPhone"] = self.conPhoneTF.text as AnyObject
+        
+        Projects.updateEngineerContractorDetails(engConDetails: projectDict as! Dictionary<String, String>, projectId: self.selProject.projectId!)
+    }
     
     
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
