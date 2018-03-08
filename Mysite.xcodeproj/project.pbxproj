@@ -27,6 +27,7 @@
 		4750993A204D1528009E854D /* CoreDatahandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509938204D1528009E854D /* CoreDatahandler.swift */; };
 		4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4750993B204D1667009E854D /* Mysite.xcdatamodeld */; };
 		47509941204D6CD3009E854D /* ProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47509940204D6CD2009E854D /* ProjectCollectionViewCell.swift */; };
+		478A5B7D2050F4A7005217EF /* ShowDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A5B7C2050F4A7005217EF /* ShowDocumentViewController.swift */; };
 		478CD8CA204FC97100C42767 /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478CD8C9204FC97100C42767 /* AddDocumentViewController.swift */; };
 		50967A1B202D5FF100114D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50967A19202D5FF100114D8A /* Main.storyboard */; };
 		50967A1D202D5FF100114D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50967A1C202D5FF100114D8A /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		47509938204D1528009E854D /* CoreDatahandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDatahandler.swift; sourceTree = "<group>"; };
 		4750993C204D1667009E854D /* Mysite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mysite.xcdatamodel; sourceTree = "<group>"; };
 		47509940204D6CD2009E854D /* ProjectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		478A5B7C2050F4A7005217EF /* ShowDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDocumentViewController.swift; sourceTree = "<group>"; };
 		478CD8C9204FC97100C42767 /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
 		50967A12202D5FF100114D8A /* Mysite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mysite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50967A1A202D5FF100114D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				478CD8C9204FC97100C42767 /* AddDocumentViewController.swift */,
 				4750990E204D1344009E854D /* InsideProjectVC.swift */,
 				4730BD062050226800C38358 /* ProjectDetailTableViewCell.swift */,
+				478A5B7C2050F4A7005217EF /* ShowDocumentViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				D00A81D7204D8FFE00FF3CDD /* AddProjectViewController.swift in Sources */,
 				47509941204D6CD3009E854D /* ProjectCollectionViewCell.swift in Sources */,
 				4750991E204D1344009E854D /* ProjectsVC.swift in Sources */,
+				478A5B7D2050F4A7005217EF /* ShowDocumentViewController.swift in Sources */,
 				4750991B204D1344009E854D /* AnnotationPin.swift in Sources */,
 				D0FC3CA52050BA0100E47B22 /* Utilities.swift in Sources */,
 				4750993A204D1528009E854D /* CoreDatahandler.swift in Sources */,
