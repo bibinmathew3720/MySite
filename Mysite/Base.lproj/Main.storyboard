@@ -1374,7 +1374,7 @@
                                         <rect key="frame" x="8" y="9" width="140" height="30"/>
                                         <state key="normal" title="Documents"/>
                                         <connections>
-                                            <segue destination="QER-ot-i7g" kind="show" id="fAt-vL-I2s"/>
+                                            <segue destination="QER-ot-i7g" kind="show" identifier="projectDetailToDocumentSegue" id="fAt-vL-I2s"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXB-B1-71R">
