@@ -20,4 +20,8 @@ class SlideViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func DocumentsButtonAction(_ sender: Any) {
+
+    }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		472DD18120569EBF00F8A35F /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD18020569EBF00F8A35F /* SlideViewController.swift */; };
+		472DD1832056AEF900F8A35F /* ListDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */; };
+		472DD1852056B12400F8A35F /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */; };
 		4730BD072050226800C38358 /* ProjectDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4730BD062050226800C38358 /* ProjectDetailTableViewCell.swift */; };
 		4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990B204D1344009E854D /* AddStageInsideVC.swift */; };
 		4750991B204D1344009E854D /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750990C204D1344009E854D /* AnnotationPin.swift */; };
@@ -67,6 +69,8 @@
 		19469F21256E78E544F1ED06 /* Pods-MysiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		46323546D6F92A0C181CF886 /* Pods-MysiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteTests/Pods-MysiteTests.release.xcconfig"; sourceTree = "<group>"; };
 		472DD18020569EBF00F8A35F /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDocumentsViewController.swift; sourceTree = "<group>"; };
+		472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
 		4730BD062050226800C38358 /* ProjectDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4750990B204D1344009E854D /* AddStageInsideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStageInsideVC.swift; sourceTree = "<group>"; };
 		4750990C204D1344009E854D /* AnnotationPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				4730BD062050226800C38358 /* ProjectDetailTableViewCell.swift */,
 				478A5B7C2050F4A7005217EF /* ShowDocumentViewController.swift */,
 				472DD18020569EBF00F8A35F /* SlideViewController.swift */,
+				472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */,
+				472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -669,8 +675,10 @@
 				47509939204D1528009E854D /* ForDataCatch.swift in Sources */,
 				47509921204D1344009E854D /* LoginPart.swift in Sources */,
 				472DD18120569EBF00F8A35F /* SlideViewController.swift in Sources */,
+				472DD1832056AEF900F8A35F /* ListDocumentsViewController.swift in Sources */,
 				D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */,
 				47509923204D1344009E854D /* LoginVO.swift in Sources */,
+				472DD1852056B12400F8A35F /* DocumentTableViewCell.swift in Sources */,
 				4750991F204D1344009E854D /* VideoLoadingVC.swift in Sources */,
 				47509924204D1344009E854D /* SignINpart.swift in Sources */,
 				478CD8CA204FC97100C42767 /* AddDocumentViewController.swift in Sources */,

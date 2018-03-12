@@ -13,7 +13,6 @@ class ShowDocumentViewController: UIViewController {
     @IBOutlet weak var documentName: UILabel!
     @IBOutlet weak var documentImageView: UIImageView!
     @IBOutlet weak var documentDetails: UILabel!
-    var isFromMenu:Bool?
     var projectId:String!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +20,11 @@ class ShowDocumentViewController: UIViewController {
     }
     
     func populateDocumentDetails(){
-        if !isFromMenu!{
         let project = Projects.getProjectData(projectId: projectId!)
         self.documentName.text = project.documentName
         self.documentDetails.text = project.documentDetail
         let imageIdentifier = project.projectId! + ".jpg"
         self.documentImageView.image = Utilities().getImage(identifier: imageIdentifier)
-        }
-            
     }
 
     override func didReceiveMemoryWarning() {

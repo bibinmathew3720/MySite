@@ -338,7 +338,6 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "projectDetailToDocumentSegue"){
             let documentDetail = segue.destination as! ShowDocumentViewController
-            documentDetail.isFromMenu = false
             documentDetail.projectId = self.selProject.projectId
         }
     }
