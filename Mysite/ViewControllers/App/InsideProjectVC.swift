@@ -272,6 +272,7 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
         self.conProjectTF.text = project.conProject
         self.conEmailTF.text = project.conEmail
         self.conPhoneTF.text = project.conPhone
+        self.title = project.name
     }
     
     
