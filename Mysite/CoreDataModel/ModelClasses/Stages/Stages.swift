@@ -19,6 +19,7 @@ class Stages: NSManagedObject {
         stage?.timeTo = stageData["timeTo"]
         stage?.workDetails = stageData["workDetails"]
         stage?.price = stageData["price"]
+        stage?.stageId = stageData["stageId"]
         CoreDataHandler.sharedInstance.saveContext()
     }
     

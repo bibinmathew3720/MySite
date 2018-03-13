@@ -10,7 +10,6 @@
 		4724C2D9205792A200863D9B /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2D8205792A200863D9B /* ChatTableViewCell.swift */; };
 		4724C2DB205792B600863D9B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2DA205792B600863D9B /* ChatViewController.swift */; };
 		4724C2E02057FBB200863D9B /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2DF2057FBB200863D9B /* OwnerViewController.swift */; };
-		4724C2E22057FBDF00863D9B /* OwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2E12057FBDF00863D9B /* OwnerTableViewCell.swift */; };
 		4724C2E42057FE0800863D9B /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2E32057FE0800863D9B /* UsersTableViewCell.swift */; };
 		4724C2E62057FE1B00863D9B /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2E52057FE1B00863D9B /* UsersViewController.swift */; };
 		472DD18120569EBF00F8A35F /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD18020569EBF00F8A35F /* SlideViewController.swift */; };
@@ -49,6 +48,7 @@
 		77FA9EACD5965C9D9BE1DC0A /* Pods_MysiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87261219B4AE59D95360871C /* Pods_MysiteUITests.framework */; };
 		D00A81D7204D8FFE00FF3CDD /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */; };
 		D00A81DA204D972900FF3CDD /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D9204D972900FF3CDD /* Projects.swift */; };
+		D0F81DB420583086004FF528 /* OwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F81DB320583086004FF528 /* OwnerTableViewCell.swift */; };
 		D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */; };
 		D0FC3CA22050A5FD00E47B22 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC3CA12050A5FD00E47B22 /* Stages.swift */; };
 		D0FC3CA52050BA0100E47B22 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC3CA42050BA0100E47B22 /* Utilities.swift */; };
@@ -77,7 +77,6 @@
 		4724C2D8205792A200863D9B /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		4724C2DA205792B600863D9B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		4724C2DF2057FBB200863D9B /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
-		4724C2E12057FBDF00863D9B /* OwnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OwnerTableViewCell.swift; path = /Users/Hari/Desktop/MyStuff/Personal/Personal/PersonalRepo/Mysite/ViewControllers/App/OwnerTableViewCell.swift; sourceTree = "<absolute>"; };
 		4724C2E32057FE0800863D9B /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		4724C2E52057FE1B00863D9B /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		472DD18020569EBF00F8A35F /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		A77B392F8CF70DB9E02D94E2 /* Pods-MysiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		D00A81D9204D972900FF3CDD /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		D0F81DB320583086004FF528 /* OwnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerTableViewCell.swift; sourceTree = "<group>"; };
 		D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
 		D0FC3CA12050A5FD00E47B22 /* Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stages.swift; sourceTree = "<group>"; };
 		D0FC3CA42050BA0100E47B22 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -186,6 +186,7 @@
 		4750990A204D1344009E854D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D0F81DB320583086004FF528 /* OwnerTableViewCell.swift */,
 				4750990B204D1344009E854D /* AddStageInsideVC.swift */,
 				4750990C204D1344009E854D /* AnnotationPin.swift */,
 				4750990D204D1344009E854D /* engineerViewVC.swift */,
@@ -203,7 +204,6 @@
 				4724C2DA205792B600863D9B /* ChatViewController.swift */,
 				4724C2D8205792A200863D9B /* ChatTableViewCell.swift */,
 				4724C2DF2057FBB200863D9B /* OwnerViewController.swift */,
-				4724C2E12057FBDF00863D9B /* OwnerTableViewCell.swift */,
 				4724C2E52057FE1B00863D9B /* UsersViewController.swift */,
 				4724C2E32057FE0800863D9B /* UsersTableViewCell.swift */,
 			);
@@ -691,7 +691,6 @@
 				47509925204D1344009E854D /* signupVC.swift in Sources */,
 				47509929204D13DD009E854D /* BaseViewController.swift in Sources */,
 				47509939204D1528009E854D /* ForDataCatch.swift in Sources */,
-				4724C2E22057FBDF00863D9B /* OwnerTableViewCell.swift in Sources */,
 				47509921204D1344009E854D /* LoginPart.swift in Sources */,
 				472DD18120569EBF00F8A35F /* SlideViewController.swift in Sources */,
 				472DD1832056AEF900F8A35F /* ListDocumentsViewController.swift in Sources */,
@@ -710,6 +709,7 @@
 				D0FC3CA22050A5FD00E47B22 /* Stages.swift in Sources */,
 				4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */,
 				47509920204D1344009E854D /* introVC.swift in Sources */,
+				D0F81DB420583086004FF528 /* OwnerTableViewCell.swift in Sources */,
 				4724C2D9205792A200863D9B /* ChatTableViewCell.swift in Sources */,
 				47509922204D1344009E854D /* LoginVC.swift in Sources */,
 				4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */,
@@ -884,7 +884,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7HWQXQBQLM;
+				DEVELOPMENT_TEAM = WVYK59KXPF;
 				INFOPLIST_FILE = Mysite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -903,7 +903,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7HWQXQBQLM;
+				DEVELOPMENT_TEAM = WVYK59KXPF;
 				INFOPLIST_FILE = Mysite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

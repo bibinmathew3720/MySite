@@ -36,6 +36,8 @@ class AddStageInsideVC: BaseViewController {
             stageDict["timeTo"] = timeToTextField.text as AnyObject
             stageDict["workDetails"] = workDetails.text as AnyObject
             stageDict["price"] = pricingTextField.text as AnyObject
+            let uuid = NSUUID().uuidString
+            stageDict["stageId"] = uuid as AnyObject
             Stages.saveStageData(stageData: stageDict as! Dictionary<String, String>)
             clearTextFields()
         }
