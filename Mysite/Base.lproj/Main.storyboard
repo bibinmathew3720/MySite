@@ -1017,7 +1017,7 @@
                                         <rect key="frame" x="0.0" y="60" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time From" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkJ-Zf-Jhm">
                                         <rect key="frame" x="0.0" y="120" width="335" height="30"/>
@@ -2145,7 +2145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ed-Dk-XcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="736.28185907046486"/>
+            <point key="canvasLocation" x="870" y="733"/>
         </scene>
         <!--Slide View Controller-->
         <scene sceneID="Ime-AM-6gZ">
@@ -2526,14 +2526,14 @@
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-57-Rqa">
-                                <rect key="frame" x="342" y="273" width="33" height="33"/>
+                                <rect key="frame" x="320" y="273" width="33" height="33"/>
                                 <state key="normal" image="mapTOpic ICN"/>
                                 <connections>
                                     <action selector="MaptoPicBTn:" destination="mgp-K0-rod" eventType="touchUpInside" id="93N-kW-P9E"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjP-iL-Bas">
-                                <rect key="frame" x="351" y="275" width="24" height="32"/>
+                                <rect key="frame" x="324" y="275" width="24" height="32"/>
                                 <state key="normal" image="picTOmap ICN"/>
                                 <connections>
                                     <action selector="PictoMapBTN:" destination="mgp-K0-rod" eventType="touchUpInside" id="RnI-Vh-nOD"/>
@@ -2543,35 +2543,35 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="247"/>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-bX-24O">
-                                <rect key="frame" x="235" y="64" width="156" height="182"/>
+                                <rect key="frame" x="219" y="64" width="156" height="182"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navDrop" translatesAutoresizingMaskIntoConstraints="NO" id="EHU-lz-N9w">
                                         <rect key="frame" x="0.0" y="0.0" width="156" height="182"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPi-Z1-f9j">
-                                        <rect key="frame" x="0.0" y="75" width="140" height="30"/>
+                                        <rect key="frame" x="8" y="75" width="140" height="30"/>
                                         <state key="normal" title="Payments"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dby-Hs-uEE">
-                                        <rect key="frame" x="0.0" y="42" width="140" height="30"/>
+                                        <rect key="frame" x="8" y="42" width="140" height="30"/>
                                         <state key="normal" title="Agreements"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-dd-IU5">
-                                        <rect key="frame" x="0.0" y="9" width="140" height="30"/>
+                                        <rect key="frame" x="8" y="9" width="140" height="30"/>
                                         <state key="normal" title="Documents"/>
                                         <connections>
                                             <segue destination="A8f-6B-cpe" kind="show" identifier="projectDetailToDocuments" id="n9j-cD-Evd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRj-Za-BV1">
-                                        <rect key="frame" x="0.0" y="139" width="140" height="30"/>
+                                        <rect key="frame" x="8" y="139" width="140" height="30"/>
                                         <state key="normal" title="Video"/>
                                         <connections>
                                             <segue destination="XaP-8B-oHr" kind="show" id="6k3-gR-ibf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQS-ua-Wbd">
-                                        <rect key="frame" x="0.0" y="107" width="140" height="30"/>
+                                        <rect key="frame" x="8" y="107" width="140" height="30"/>
                                         <state key="normal" title="Request"/>
                                     </button>
                                 </subviews>
@@ -3742,7 +3742,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="syX-8Y-h7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335" y="736"/>
+            <point key="canvasLocation" x="1554" y="734"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="weI-xu-bum">
@@ -3954,7 +3954,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJw-hZ-hnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3045.5999999999999" y="733.5832083958021"/>
+            <point key="canvasLocation" x="2242" y="733"/>
         </scene>
         <!--CHAT-->
         <scene sceneID="spa-jF-4uM">
@@ -4050,7 +4050,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40V-ka-iVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3769" y="735"/>
+            <point key="canvasLocation" x="2970" y="734"/>
         </scene>
     </scenes>
     <resources>
