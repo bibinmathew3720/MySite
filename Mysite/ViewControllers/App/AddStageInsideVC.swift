@@ -38,7 +38,7 @@ class AddStageInsideVC: BaseViewController {
         workDetails.text = stage.workDetails
         pricingTextField.text = stage.price
         nextButton.isHidden = true
-        addStageButton.setTitle("Edit Stage", for: UIControlState.normal)
+        addStageButton.setTitle("Update", for: UIControlState.normal)
     }
 
     
@@ -58,7 +58,7 @@ class AddStageInsideVC: BaseViewController {
             Stages.saveStageData(stageData: stageDict as! Dictionary<String, String>)
             clearTextFields()
             if let stage = stageDetails{
-                navigationController?.popViewController(animated: true)
+                showAlertWithMessage(alertMessage: "Stage details updated successfully")
             }
         }
     }
