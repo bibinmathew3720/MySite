@@ -95,7 +95,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
         scrollView.isHidden = true
         self.tableView.delegate=self;
         self.tableView.dataSource=self;
-        
+        self.tableView.allowsMultipleSelectionDuringEditing = false;
         mapView.delegate = self
         
         let coordinate = CLLocationCoordinate2D(latitude: 24.466667, longitude: 54.366669)
@@ -329,6 +329,15 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Edit Stage"
+    }
+    
+    // this method handles row deletion
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
