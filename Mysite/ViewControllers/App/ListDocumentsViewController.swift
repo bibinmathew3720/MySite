@@ -10,16 +10,22 @@ import UIKit
 
 class ListDocumentsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var ListTableView: UITableView!
-    
+    var projectsArray = [Projects]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Documents"
+        
         // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        projectsArray = Projects.getAllProjects() as! [Projects]
+        ListTableView.reloadData()
     }
     
     //Update Code
@@ -29,7 +35,7 @@ class ListDocumentsViewController: UIViewController,UITableViewDelegate,UITableV
     // MARK: Table View Datasources
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10//stagesArray.count
+        return projectsArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +44,7 @@ class ListDocumentsViewController: UIViewController,UITableViewDelegate,UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "documentCell", for: indexPath) as! DocumentTableViewCell
-        // cell.setStageDetails(stageDetail: stagesArray[indexPath.section])
+        cell.setDocumentDetailOfProject(project: projectsArray[indexPath.section])
         return cell
     }
     
