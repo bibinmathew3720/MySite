@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4724C2D9205792A200863D9B /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2D8205792A200863D9B /* ChatTableViewCell.swift */; };
 		4724C2DB205792B600863D9B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2DA205792B600863D9B /* ChatViewController.swift */; };
+		4724C2E02057FBB200863D9B /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2DF2057FBB200863D9B /* OwnerViewController.swift */; };
+		4724C2E22057FBDF00863D9B /* OwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2E12057FBDF00863D9B /* OwnerTableViewCell.swift */; };
+		4724C2E42057FE0800863D9B /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2E32057FE0800863D9B /* UsersTableViewCell.swift */; };
+		4724C2E62057FE1B00863D9B /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2E52057FE1B00863D9B /* UsersViewController.swift */; };
 		472DD18120569EBF00F8A35F /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD18020569EBF00F8A35F /* SlideViewController.swift */; };
 		472DD1832056AEF900F8A35F /* ListDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */; };
 		472DD1852056B12400F8A35F /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */; };
@@ -72,6 +76,10 @@
 		46323546D6F92A0C181CF886 /* Pods-MysiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteTests/Pods-MysiteTests.release.xcconfig"; sourceTree = "<group>"; };
 		4724C2D8205792A200863D9B /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		4724C2DA205792B600863D9B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		4724C2DF2057FBB200863D9B /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
+		4724C2E12057FBDF00863D9B /* OwnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OwnerTableViewCell.swift; path = /Users/Hari/Desktop/MyStuff/Personal/Personal/PersonalRepo/Mysite/ViewControllers/App/OwnerTableViewCell.swift; sourceTree = "<absolute>"; };
+		4724C2E32057FE0800863D9B /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		4724C2E52057FE1B00863D9B /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		472DD18020569EBF00F8A35F /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDocumentsViewController.swift; sourceTree = "<group>"; };
 		472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
@@ -194,6 +202,10 @@
 				472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */,
 				4724C2DA205792B600863D9B /* ChatViewController.swift */,
 				4724C2D8205792A200863D9B /* ChatTableViewCell.swift */,
+				4724C2DF2057FBB200863D9B /* OwnerViewController.swift */,
+				4724C2E12057FBDF00863D9B /* OwnerTableViewCell.swift */,
+				4724C2E52057FE1B00863D9B /* UsersViewController.swift */,
+				4724C2E32057FE0800863D9B /* UsersTableViewCell.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -679,6 +691,7 @@
 				47509925204D1344009E854D /* signupVC.swift in Sources */,
 				47509929204D13DD009E854D /* BaseViewController.swift in Sources */,
 				47509939204D1528009E854D /* ForDataCatch.swift in Sources */,
+				4724C2E22057FBDF00863D9B /* OwnerTableViewCell.swift in Sources */,
 				47509921204D1344009E854D /* LoginPart.swift in Sources */,
 				472DD18120569EBF00F8A35F /* SlideViewController.swift in Sources */,
 				472DD1832056AEF900F8A35F /* ListDocumentsViewController.swift in Sources */,
@@ -691,6 +704,8 @@
 				478CD8CA204FC97100C42767 /* AddDocumentViewController.swift in Sources */,
 				4750991C204D1344009E854D /* engineerViewVC.swift in Sources */,
 				4730BD072050226800C38358 /* ProjectDetailTableViewCell.swift in Sources */,
+				4724C2E42057FE0800863D9B /* UsersTableViewCell.swift in Sources */,
+				4724C2E62057FE1B00863D9B /* UsersViewController.swift in Sources */,
 				4750991D204D1344009E854D /* InsideProjectVC.swift in Sources */,
 				D0FC3CA22050A5FD00E47B22 /* Stages.swift in Sources */,
 				4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */,
@@ -698,6 +713,7 @@
 				4724C2D9205792A200863D9B /* ChatTableViewCell.swift in Sources */,
 				47509922204D1344009E854D /* LoginVC.swift in Sources */,
 				4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */,
+				4724C2E02057FBB200863D9B /* OwnerViewController.swift in Sources */,
 				47509935204D146F009E854D /* UserDetails.swift in Sources */,
 				D00A81DA204D972900FF3CDD /* Projects.swift in Sources */,
 			);

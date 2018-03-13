@@ -24,8 +24,12 @@ class ListDocumentsViewController: UIViewController,UITableViewDelegate,UITableV
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        projectsArray = Projects.getAllProjects() as! [Projects]
-        ListTableView.reloadData()
+        if let data = Projects.getAllProjects() as? [Projects]
+            
+        {
+            projectsArray = data
+            ListTableView.reloadData()
+        }
     }
     
     //Update Code

@@ -1,5 +1,5 @@
 //
-//  ChatViewController.swift
+//  OwnerViewController.swift
 //  Mysite
 //
 //  Created by Hari on 13/03/18.
@@ -8,31 +8,34 @@
 
 import UIKit
 
-class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
-    @IBOutlet weak var chatTableView: UITableView!
+class OwnerViewController: UIViewController,UITableViewDelegate,UITableViewDataSource  {
+    
+    
+    @IBOutlet weak var ListTableView: UITableView!
     var projectsArray = [Projects]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Users List"
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-    
     override func viewWillAppear(_ animated: Bool) {
+        
         if let data = Projects.getAllProjects() as? [Projects]
+            
         {
             projectsArray = data
-            chatTableView.reloadData()
+             ListTableView.reloadData()
         }
     }
-    
+
     // MARK: Table View Datasources
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,7 +47,7 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as! ChatTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ownerCell", for: indexPath) as! OwnerTableViewCell
         cell.setDocumentDetailOfProject(project: projectsArray[indexPath.row])
         return cell
     }
@@ -52,15 +55,5 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 5
-//    }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView=UIView()
-//        headerView.backgroundColor=UIColor.clear
-//        return headerView
-//    }
 
 }
