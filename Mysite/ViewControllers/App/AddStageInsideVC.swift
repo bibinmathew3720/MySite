@@ -46,20 +46,28 @@ class AddStageInsideVC: BaseViewController {
     @IBAction func addBTNpressed(_ sender: UIButton) {
 
         if(ValidateDetails()){
-            stageDict["projectId"] = projectDetail["projectId"]
+            
             stageDict["stageName"] = stageNameTextFeild.text as AnyObject
             stageDict["progress"] = progressTextField.text as AnyObject
             stageDict["timeFrom"] = timeFromTextField.text as AnyObject
             stageDict["timeTo"] = timeToTextField.text as AnyObject
             stageDict["workDetails"] = workDetails.text as AnyObject
             stageDict["price"] = pricingTextField.text as AnyObject
-            let uuid = NSUUID().uuidString
-            stageDict["stageId"] = uuid as AnyObject
-            Stages.saveStageData(stageData: stageDict as! Dictionary<String, String>)
-            clearTextFields()
+            
             if let stage = stageDetails{
+                stageDict["projectId"] = stage.projectId as AnyObject
+                stageDict["stageId"] = stage.stageId as AnyObject
                 showAlertWithMessage(alertMessage: "Stage details updated successfully")
             }
+            else{
+                stageDict["projectId"] = projectDetail["projectId"]
+                let uuid = NSUUID().uuidString
+                stageDict["stageId"] = uuid as AnyObject
+                clearTextFields()
+            }
+            Stages.saveStageData(stageData: stageDict as! Dictionary<String, String>)
+            
+            
         }
     }
     

@@ -90,7 +90,6 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populatPrjectDetails()
         self.engineerView.isHidden = true;
         scrollView.isHidden = true
         self.tableView.delegate=self;
@@ -111,6 +110,10 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
 //            self.progress1.progress = Float(pr/100)
 //            self.progressperLabel.text = selProject.progress!+"%"
 //        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        populatPrjectDetails()
     }
     
     
@@ -261,6 +264,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     func populatPrjectDetails(){
         stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
+        stagesTableView.reloadData()
         let project = Projects.getProjectData(projectId: selProject.projectId!)
         self.nameTF.text = project.engName
         self.locationTF.text = project.engLocation
