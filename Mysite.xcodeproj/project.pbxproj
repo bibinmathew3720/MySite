@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4724C2D9205792A200863D9B /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2D8205792A200863D9B /* ChatTableViewCell.swift */; };
+		4724C2DB205792B600863D9B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724C2DA205792B600863D9B /* ChatViewController.swift */; };
 		472DD18120569EBF00F8A35F /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD18020569EBF00F8A35F /* SlideViewController.swift */; };
 		472DD1832056AEF900F8A35F /* ListDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */; };
 		472DD1852056B12400F8A35F /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */; };
@@ -68,6 +70,8 @@
 /* Begin PBXFileReference section */
 		19469F21256E78E544F1ED06 /* Pods-MysiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		46323546D6F92A0C181CF886 /* Pods-MysiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteTests/Pods-MysiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		4724C2D8205792A200863D9B /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		4724C2DA205792B600863D9B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		472DD18020569EBF00F8A35F /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDocumentsViewController.swift; sourceTree = "<group>"; };
 		472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				472DD18020569EBF00F8A35F /* SlideViewController.swift */,
 				472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */,
 				472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */,
+				4724C2DA205792B600863D9B /* ChatViewController.swift */,
+				4724C2D8205792A200863D9B /* ChatTableViewCell.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -680,6 +686,7 @@
 				47509923204D1344009E854D /* LoginVO.swift in Sources */,
 				472DD1852056B12400F8A35F /* DocumentTableViewCell.swift in Sources */,
 				4750991F204D1344009E854D /* VideoLoadingVC.swift in Sources */,
+				4724C2DB205792B600863D9B /* ChatViewController.swift in Sources */,
 				47509924204D1344009E854D /* SignINpart.swift in Sources */,
 				478CD8CA204FC97100C42767 /* AddDocumentViewController.swift in Sources */,
 				4750991C204D1344009E854D /* engineerViewVC.swift in Sources */,
@@ -688,6 +695,7 @@
 				D0FC3CA22050A5FD00E47B22 /* Stages.swift in Sources */,
 				4750991A204D1344009E854D /* AddStageInsideVC.swift in Sources */,
 				47509920204D1344009E854D /* introVC.swift in Sources */,
+				4724C2D9205792A200863D9B /* ChatTableViewCell.swift in Sources */,
 				47509922204D1344009E854D /* LoginVC.swift in Sources */,
 				4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */,
 				47509935204D146F009E854D /* UserDetails.swift in Sources */,
@@ -858,6 +866,7 @@
 			baseConfigurationReference = 64EA6ADD2152FA5E784EF194 /* Pods-Mysite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HWQXQBQLM;
 				INFOPLIST_FILE = Mysite/Info.plist;
@@ -865,6 +874,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.code.Mysite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -875,6 +885,7 @@
 			baseConfigurationReference = 8BB9B931493F58241BEC8A46 /* Pods-Mysite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HWQXQBQLM;
 				INFOPLIST_FILE = Mysite/Info.plist;
@@ -882,6 +893,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.code.Mysite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate  {
+class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate  {
     @IBOutlet weak var progressperLabel: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
@@ -297,6 +297,8 @@ class InsideProjectVC: UIViewController, MKMapViewDelegate, UITableViewDataSourc
         projectDict ["conPhone"] = self.conPhoneTF.text as AnyObject
         
         Projects.updateEngineerContractorDetails(engConDetails: projectDict as! Dictionary<String, String>, projectId: self.selProject.projectId!)
+        
+        self.showAlertWithMessage(alertMessage: "Details Saved")
     }
     
     
