@@ -18,10 +18,27 @@ class AddStageInsideVC: BaseViewController {
     @IBOutlet var timeToTextField: UITextField!
     @IBOutlet var workDetails: UITextField!
     @IBOutlet var pricingTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var addStageButton: UIButton!
     
+    var stageDetails:Stages!
     var stageDict:[String:AnyObject] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let stage = stageDetails{
+            populateStageDetails(stage: stage)
+        }
+    }
+    
+    func populateStageDetails(stage:Stages){
+        stageNameTextFeild.text = stage.stageName
+        progressTextField.text = stage.progress
+        timeFromTextField.text = stage.timeFrom
+        timeToTextField.text = stage.timeTo
+        workDetails.text = stage.workDetails
+        pricingTextField.text = stage.price
+        nextButton.isHidden = true
+        addStageButton.setTitle("Edit Stage", for: UIControlState.normal)
     }
 
     
@@ -40,6 +57,9 @@ class AddStageInsideVC: BaseViewController {
             stageDict["stageId"] = uuid as AnyObject
             Stages.saveStageData(stageData: stageDict as! Dictionary<String, String>)
             clearTextFields()
+            if let stage = stageDetails{
+                navigationController?.popViewController(animated: true)
+            }
         }
     }
     

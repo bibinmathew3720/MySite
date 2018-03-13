@@ -1090,6 +1090,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="addStageButton" destination="VLf-PC-iTt" id="OYP-x6-aJH"/>
+                        <outlet property="nextButton" destination="zhi-Hj-Zon" id="IRZ-Gs-Iq7"/>
                         <outlet property="pricingTextField" destination="qeo-YS-pxO" id="wBI-8F-WdQ"/>
                         <outlet property="progressTextField" destination="JAt-sB-Y5y" id="Nci-HV-6rM"/>
                         <outlet property="stageNameTextFeild" destination="bWq-Wh-Tbq" id="3nK-2N-czT"/>
@@ -2000,6 +2002,7 @@
                         <outlet property="stagesTableView" destination="8Iw-tc-jTH" id="aKn-t2-xtZ"/>
                         <outlet property="tableView" destination="8Iw-tc-jTH" id="fNm-tt-RFv"/>
                         <outlet property="threedotICN" destination="G8S-UM-OJA" id="DB7-VM-cCf"/>
+                        <segue destination="Hmd-ar-bj1" kind="show" identifier="editStageSegue" id="D8L-0l-wvd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSk-Pt-9e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4087,6 +4090,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rYy-Qb-oJm"/>
+        <segue reference="D8L-0l-wvd"/>
         <segue reference="8Qe-7l-KFj"/>
     </inferredMetricsTieBreakers>
 </document>

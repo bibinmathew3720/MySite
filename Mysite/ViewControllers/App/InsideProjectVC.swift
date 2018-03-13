@@ -337,7 +337,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     // this method handles row deletion
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
+         performSegue(withIdentifier: "editStageSegue", sender: stagesArray[indexPath.section])
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -350,6 +350,11 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
         if(segue.identifier == "projectDetailToDocumentSegue"){
             let documentDetail = segue.destination as! ShowDocumentViewController
             documentDetail.projectId = self.selProject.projectId
+        }
+        else if(segue.identifier == "editStageSegue"){
+            let addStage = segue.destination as! AddStageInsideVC
+            addStage.stageDetails = sender as! Stages
+            
         }
     }
 }
