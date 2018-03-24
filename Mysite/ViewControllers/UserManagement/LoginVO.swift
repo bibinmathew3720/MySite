@@ -24,15 +24,15 @@ class LoginVO: BaseViewController {
     }
     
     @IBAction func logInButtonAction(_ sender: UIButton) {
-//        if(ValidateDetails()){
-//            let userDetail = UserDetails.getUserDetailsWithEmailIdAndPassword(emailId: emailTF.text!, password: passwordTF.text!)
-//            if(userDetail == nil){
-//                showAlertWithMessage(alertMessage: "Invalid login credentials")
-//            }
-//            else{
+        if(ValidateDetails()){
+            let userDetail = UserDetails.getUserDetailsWithEmailIdAndPassword(emailId: emailTF.text!, password: passwordTF.text!)
+            if(userDetail == nil){
+                showAlertWithMessage(alertMessage: "Invalid login credentials")
+            }
+            else{
                performSegue(withIdentifier: "ownerLogInIdentifier", sender: sender)
-//            }
-//        }
+            }
+        }
     }
     
     func ValidateDetails() -> Bool {
