@@ -75,6 +75,10 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
             let projectDetail = segue.destination as! InsideProjectVC
             projectDetail.selProject = sender as! Projects
         }
+        else if(segue.identifier == "editprofileIdentifier"){
+            let signUp = segue.destination as! signupVC
+            signUp.isFromEditProfile = true
+        }
     }
 }
 

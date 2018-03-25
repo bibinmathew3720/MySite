@@ -9,6 +9,11 @@
 import UIKit
 
 class signupVC: BaseViewController {
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var termsAndServiceLabel: UILabel!
+    @IBOutlet weak var signUpButton: UIButton!
+    
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -16,9 +21,15 @@ class signupVC: BaseViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPwdTF: UITextField!
     
+    var isFromEditProfile:Bool!
+    
     var isContractor:Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let isFromEdit = isFromEditProfile{
+            self.signUpButton.setTitle("Update Profile", for: UIControlState.normal)
+            self.backButton.isHidden = true
+        }
 
         // Do any additional setup after loading the view.
     }
