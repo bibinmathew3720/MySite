@@ -30,6 +30,7 @@ class LoginVC: BaseViewController {
                 showAlertWithMessage(alertMessage: "Invalid login credentials")
             }
             else{
+                UserDefaults.standard.set(self.emailTF.text, forKey: Constant.kEmailIdKey)
                performSegue(withIdentifier: "contractorlogIntoHomeIdentifier", sender: sender)
             }
         }

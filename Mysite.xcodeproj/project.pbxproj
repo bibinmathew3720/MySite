@@ -49,6 +49,7 @@
 		D00A81D7204D8FFE00FF3CDD /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */; };
 		D00A81DA204D972900FF3CDD /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D9204D972900FF3CDD /* Projects.swift */; };
 		D0F81DB420583086004FF528 /* OwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F81DB320583086004FF528 /* OwnerTableViewCell.swift */; };
+		D0FB89E62067ECA500AADFB0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB89E52067ECA500AADFB0 /* Constants.swift */; };
 		D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */; };
 		D0FC3CA22050A5FD00E47B22 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC3CA12050A5FD00E47B22 /* Stages.swift */; };
 		D0FC3CA52050BA0100E47B22 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC3CA42050BA0100E47B22 /* Utilities.swift */; };
@@ -126,6 +127,7 @@
 		D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		D00A81D9204D972900FF3CDD /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		D0F81DB320583086004FF528 /* OwnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerTableViewCell.swift; sourceTree = "<group>"; };
+		D0FB89E52067ECA500AADFB0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
 		D0FC3CA12050A5FD00E47B22 /* Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stages.swift; sourceTree = "<group>"; };
 		D0FC3CA42050BA0100E47B22 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 			children = (
 				D0FC3CA32050B9DB00E47B22 /* Utilities */,
 				D0FBF12E204C034F00919FC4 /* CoreDataHandler */,
+				D0FB89E52067ECA500AADFB0 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				4750993D204D1668009E854D /* Mysite.xcdatamodeld in Sources */,
 				4724C2E02057FBB200863D9B /* OwnerViewController.swift in Sources */,
 				47509935204D146F009E854D /* UserDetails.swift in Sources */,
+				D0FB89E62067ECA500AADFB0 /* Constants.swift in Sources */,
 				D00A81DA204D972900FF3CDD /* Projects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

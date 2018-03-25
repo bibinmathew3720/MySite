@@ -13,6 +13,7 @@ class signupVC: BaseViewController {
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var termsAndServiceLabel: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var paswordMiddleIcon: UIImageView!
     
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
@@ -27,11 +28,30 @@ class signupVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let isFromEdit = isFromEditProfile{
-            self.signUpButton.setTitle("Update Profile", for: UIControlState.normal)
-            self.backButton.isHidden = true
+          populateUserDetails()
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    func populateUserDetails(){
+        self.signUpButton.setTitle("Update Profile", for: UIControlState.normal)
+        self.backButton.isHidden = true
+        self.termsAndServiceLabel.isHidden = true
+        self.conditionLabel.isHidden = true
+        self.passwordTF.isHidden = true
+        self.confirmPwdTF.isHidden = true
+        self.paswordMiddleIcon.isHidden = true
+        self.title = "Update Profile"
+        
+        let emailId = UserDefaults.standard.value(forKey: Constant.kEmailIdKey)
+        let userDetails = UserDetails.getUserDetailsWithEmailId(emailId: emailId as! String)
+        self.firstNameTF.text = userDetails?.firstName
+        self.lastNameTF.text = userDetails?.lastName
+        self.emailTF.text = userDetails?.email
+        self.phoneTF.text = userDetails?.phoneNo
+        self.passwordTF.text = userDetails?.password
+        self.confirmPwdTF.text = userDetails?.password
     }
    
     
@@ -42,7 +62,12 @@ class signupVC: BaseViewController {
     @IBAction func signUpAction(_ sender: UIButton) {
         if(ValidateDetails()){
             self.saveUserDetailsToDB()
-            performSegue(withIdentifier: "showHomePageSegue", sender: sender)
+            if let isFromEdit = isFromEditProfile{
+                self.showAlertWithMessage(alertMessage: "Profile Updated successfully")
+            }
+            else{
+                performSegue(withIdentifier: "showHomePageSegue", sender: sender)
+            }
         }
     }
     
@@ -82,12 +107,13 @@ class signupVC: BaseViewController {
         userDetailsDict["emailID"] = self.emailTF.text as AnyObject
         userDetailsDict["phoneNo"] = self.phoneTF.text as AnyObject
         userDetailsDict["password"] = self.passwordTF.text as AnyObject
-        if(isContractor)!{
+        if let isCont = isContractor{
             userDetailsDict["userType"] = "1" as AnyObject
         }
         else{
             userDetailsDict["userType"] = "2" as AnyObject
         }
+        UserDefaults.standard.set(self.emailTF.text, forKey: Constant.kEmailIdKey)
         UserDetails.saveUserData(userData: userDetailsDict as! Dictionary<String, String>)
     }
     
