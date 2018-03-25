@@ -67,7 +67,6 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     
     
-    
     // Second outlet view part
    // frist stack view outlets
     @IBOutlet weak var estage1: UITextField!
@@ -266,6 +265,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
         stagesArray = Stages.getStagesOfProject(projectId: selProject.projectId!)
         stagesTableView.reloadData()
         let project = Projects.getProjectData(projectId: selProject.projectId!)
+        projectDict ["projectId"] = project.projectId as AnyObject
         self.nameTF.text = project.engName
         self.locationTF.text = project.engLocation
         self.projectTF.text = project.engProject
@@ -359,6 +359,11 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
             let addStage = segue.destination as! AddStageInsideVC
             addStage.stageDetails = sender as! Stages
             
+        }
+        else if(segue.identifier == "addStageIdentfier"){
+            let addStageVC = segue.destination as! AddStageInsideVC
+            addStageVC.projectDetail = projectDict
+            addStageVC.isFromEditProject = true
         }
     }
 }

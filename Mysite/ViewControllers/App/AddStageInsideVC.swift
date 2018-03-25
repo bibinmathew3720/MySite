@@ -21,12 +21,17 @@ class AddStageInsideVC: BaseViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addStageButton: UIButton!
     
+    var isFromEditProject:Bool!
     var stageDetails:Stages!
     var stageDict:[String:AnyObject] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
         if let stage = stageDetails{
             populateStageDetails(stage: stage)
+        }
+        
+        if let isFromprojectEdit = isFromEditProject{
+           self.nextButton.isHidden = true
         }
     }
     
@@ -64,6 +69,9 @@ class AddStageInsideVC: BaseViewController {
                 let uuid = NSUUID().uuidString
                 stageDict["stageId"] = uuid as AnyObject
                 clearTextFields()
+                if let isFromprojectEdit = isFromEditProject{
+                    showAlertWithMessage(alertMessage: "Stage added successfully")
+                }
             }
             Stages.saveStageData(stageData: stageDict as! Dictionary<String, String>)
             
