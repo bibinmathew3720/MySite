@@ -199,8 +199,8 @@
 				478CD8C9204FC97100C42767 /* AddDocumentViewController.swift */,
 				4750990E204D1344009E854D /* InsideProjectVC.swift */,
 				4730BD062050226800C38358 /* ProjectDetailTableViewCell.swift */,
-				478A5B7C2050F4A7005217EF /* ShowDocumentViewController.swift */,
 				472DD18020569EBF00F8A35F /* SlideViewController.swift */,
+				478A5B7C2050F4A7005217EF /* ShowDocumentViewController.swift */,
 				472DD1822056AEF900F8A35F /* ListDocumentsViewController.swift */,
 				472DD1842056B12400F8A35F /* DocumentTableViewCell.swift */,
 				4724C2DA205792B600863D9B /* ChatViewController.swift */,
@@ -888,7 +888,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVYK59KXPF;
+				DEVELOPMENT_TEAM = 7HWQXQBQLM;
 				INFOPLIST_FILE = Mysite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -907,7 +907,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVYK59KXPF;
+				DEVELOPMENT_TEAM = 7HWQXQBQLM;
 				INFOPLIST_FILE = Mysite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

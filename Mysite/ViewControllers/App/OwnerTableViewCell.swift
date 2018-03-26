@@ -11,7 +11,6 @@ class OwnerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var projectName: UILabel!
     @IBOutlet weak var engineerName: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -11,6 +11,7 @@ import UIKit
 class UsersTableViewCell: UITableViewCell {
     @IBOutlet weak var projectName: UILabel!
     @IBOutlet weak var engineerName: UILabel!
+    @IBOutlet weak var contracterName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +26,7 @@ class UsersTableViewCell: UITableViewCell {
 
     func setDocumentDetailOfProject(project:Projects){
         engineerName.text = project.engName ?? "Unknown"
+        contracterName.text = project.conName ?? "Unknown"
         projectName.text = project.name
     }
     

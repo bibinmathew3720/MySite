@@ -45,7 +45,9 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     @IBOutlet weak var locationTF: UITextField!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var contractorEmail: UILabel!
     
+    @IBOutlet weak var conractorPhoneNo: UILabel!
     @IBOutlet weak var conNameTF: UITextField!
     @IBOutlet weak var conLocationTF: UITextField!
     @IBOutlet weak var conProjectTF: UITextField!
@@ -113,6 +115,51 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         populatPrjectDetails()
+    }
+    
+    @IBAction func callButtonConractor(_ sender: Any) {
+        guard let number = URL(string: "telprompt://123456789") else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(number)
+        } else {
+            // Fallback on earlier versions
+            UIApplication.shared.openURL(number)
+        }
+    }
+    
+   
+    @IBAction func emailContractorButton(_ sender: Any) {
+        guard let email = URL(string: "mailto://email@email.com") else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(email)
+            //            print ("fine")
+        } else {
+            // Fallback on earlier versions
+            UIApplication.shared.openURL(email)
+        }
+    }
+    
+    @IBAction func engineerCallButton(_ sender: Any) {
+        guard let number = URL(string: "telprompt://123456789") else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(number)
+        } else {
+            // Fallback on earlier versions
+            UIApplication.shared.openURL(number)
+        }
+        
+    }
+    
+    @IBAction func engineerEmailButton(_ sender: Any) {
+        
+        guard let email = URL(string: "mailto://email@email.com") else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(email)
+            //            print ("fine")
+        } else {
+            // Fallback on earlier versions
+            UIApplication.shared.openURL(email)
+        }
     }
     
     
