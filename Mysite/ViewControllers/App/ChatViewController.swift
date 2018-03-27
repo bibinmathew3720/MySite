@@ -53,14 +53,6 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
         return 80
     }
     
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 5
-//    }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView=UIView()
-//        headerView.backgroundColor=UIColor.clear
-//        return headerView
-//    }
+
 
 }

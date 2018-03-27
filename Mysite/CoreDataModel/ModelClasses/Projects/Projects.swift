@@ -16,6 +16,7 @@ class Projects: NSManagedObject {
         project?.location = projectData["location"]
         project?.startDate = projectData["startDate"]
         project?.endDate = projectData["endDate"]
+        project?.url = projectData["url"]
 //        project?.stage = projectData["stageName"]
 //        project?.progress = projectData["progress"]
         project?.projectId =  projectData["projectId"]

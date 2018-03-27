@@ -405,12 +405,16 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
         else if(segue.identifier == "editStageSegue"){
             let addStage = segue.destination as! AddStageInsideVC
             addStage.stageDetails = sender as! Stages
-            
         }
         else if(segue.identifier == "addStageIdentfier"){
             let addStageVC = segue.destination as! AddStageInsideVC
             addStageVC.projectDetail = projectDict
             addStageVC.isFromEditProject = true
+        }
+        else if(segue.identifier == "videoPlayer"){
+            let project = Projects.getProjectData(projectId: selProject.projectId!)
+            let videoVC = segue.destination as! VideoLoadingVC
+            videoVC.projectUrl = project.url!
         }
     }
 }

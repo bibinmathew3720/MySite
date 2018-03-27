@@ -17,7 +17,6 @@ class AddProjectViewController: BaseViewController {
     var projectDict:[String:AnyObject] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +29,7 @@ class AddProjectViewController: BaseViewController {
             projectDict["startDate"] = self.startingDateTextFeild.text as AnyObject
             projectDict["endDate"] = self.endingDateTextFeild.text as AnyObject
             projectDict["location"] = self.locationTextFeild.text as AnyObject
+            projectDict["url"] = shuffle() as AnyObject
             let uuid = NSUUID().uuidString
              projectDict["projectId"] = uuid as AnyObject
             print(uuid)
@@ -37,6 +37,18 @@ class AddProjectViewController: BaseViewController {
             performSegue(withIdentifier: "addProjectToNextPage", sender: nil)
         }
         
+    }
+    
+    func shuffle() -> String {
+        let videoLinks = [
+            "https://www.youtube.com/watch?v=tzt9AgWBbcQ",
+            "https://www.youtube.com/watch?v=8zjXK0FDzfI",
+            "https://www.youtube.com/watch?v=bXAx8BDNbVU",
+            "https://www.youtube.com/watch?v=ZTKETIvSys4",
+            "https://www.youtube.com/watch?v=5nx68wxQCYk",
+        ]
+        let randomNumber = Int(arc4random_uniform(4))
+        return videoLinks[randomNumber]
     }
     
     func ValidateDetails() -> Bool {

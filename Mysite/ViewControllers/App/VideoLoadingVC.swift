@@ -9,59 +9,28 @@
 import UIKit
 import WebKit
 
-class VideoLoadingVC: UIViewController {
-    
-    @IBOutlet weak var Webview2: UIWebView!
-    
-    @IBOutlet weak var activityAction: UIActivityIndicatorView!
-    
+class VideoLoadingVC: UIViewController,UIWebViewDelegate {
+    var projectUrl:String?
+    @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.delegate = self
+        webView.allowsInlineMediaPlayback = true
+        webView.mediaPlaybackRequiresUserAction = false
         
-       
-        func videoplaying (){
-            
-            Webview2.loadHTMLString("<iframe width=\"\(Webview2.frame.width - 2)\" height=\"\(Webview2.frame.height)\" src=\"https://www.youtube.com/embed/Yqu21vPBylY\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>", baseURL: nil)
-
-//            activityAction.isHidden=true
-            
-        }
-        
-        func loader (){
-            if Webview2.isLoading{
-                activityAction.stopAnimating()
-                videoplaying()
-                
-            }else{
-                activityAction.startAnimating()
-                videoplaying()
-                activityAction.isHidden=true            }
-            
-        }
-        
-        loader()
-        
-        videoplaying()
-        
-        
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let urlString = projectUrl!
+        let url = NSURL(string: urlString)
+        let url_request = NSURLRequest(url: url! as URL,
+                                       cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad,
+                                       timeoutInterval: 20.0)
+        self.webView.loadRequest(url_request as URLRequest)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
     }
-    */
-
+    
 }
