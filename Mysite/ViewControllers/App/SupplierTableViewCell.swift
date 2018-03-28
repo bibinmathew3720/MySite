@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol SupplierTableViewCellDelegate:class{
+    func callPhone(index:Int)
+}
+
 class SupplierTableViewCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var number: UILabel!
-    
+    weak var delegate:SupplierTableViewCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,8 +27,13 @@ class SupplierTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setSupplierDetails(supplier:Supplier){
+        self.name.text = supplier.name
+        self.number.text = supplier.phoneNo
+    }
     @IBAction func CallButtonAction(_ sender: Any) {
-        
+        delegate?.callPhone(index: self.tag)
     }
     
 }

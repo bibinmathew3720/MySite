@@ -8,8 +8,10 @@
 
 import UIKit
 
-class AddSupplierViewController: UIViewController {
-
+class AddSupplierViewController: BaseViewController {
+    
+    var supplierDict:[String:AnyObject] = [:]
+    
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var supplierName: UITextField!
     override func viewDidLoad() {
@@ -25,6 +27,34 @@ class AddSupplierViewController: UIViewController {
     
 
     @IBAction func AddButtonAction(_ sender: Any) {
+        if(ValidateDetails()){
+            supplierDict ["name"] = self.supplierName.text as AnyObject
+            supplierDict ["phone"] = self.phoneNumber.text as AnyObject
+            Supplier.saveSupplierDetails(supplierData: supplierDict as! Dictionary<String, String>)
+            self.showAlertWithMessage(alertMessage: "Supplier added successfully")
+            clearAllFields()
+        }
+    }
+    
+    func ValidateDetails() -> Bool {
+        var isValid:Bool = false
+        var messageString:String?
+        if(self.supplierName.text?.isEmpty)! {
+            messageString = "Please enter supplier name"
+        } else if(self.phoneNumber.text?.isEmpty)! {
+            messageString = "Please enter supplier phone number"
+        } else {
+            isValid = true
+        }
+        if !isValid {
+            self.showAlertWithMessage(alertMessage: messageString!)
+        }
+        return isValid
+    }
+    
+    func clearAllFields(){
+        self.supplierName.text = ""
+        self.phoneNumber.text = ""
     }
     /*
     // MARK: - Navigation

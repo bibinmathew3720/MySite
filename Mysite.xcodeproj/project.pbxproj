@@ -51,6 +51,7 @@
 		77FA9EACD5965C9D9BE1DC0A /* Pods_MysiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87261219B4AE59D95360871C /* Pods_MysiteUITests.framework */; };
 		D00A81D7204D8FFE00FF3CDD /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */; };
 		D00A81DA204D972900FF3CDD /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A81D9204D972900FF3CDD /* Projects.swift */; };
+		D027900E206B4BE20060AC6C /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D027900D206B4BE20060AC6C /* Supplier.swift */; };
 		D0F81DB420583086004FF528 /* OwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F81DB320583086004FF528 /* OwnerTableViewCell.swift */; };
 		D0FB89E62067ECA500AADFB0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB89E52067ECA500AADFB0 /* Constants.swift */; };
 		D0FBF130204C034F00919FC4 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */; };
@@ -132,6 +133,7 @@
 		A77B392F8CF70DB9E02D94E2 /* Pods-MysiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MysiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MysiteUITests/Pods-MysiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D00A81D6204D8FFE00FF3CDD /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		D00A81D9204D972900FF3CDD /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		D027900D206B4BE20060AC6C /* Supplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
 		D0F81DB320583086004FF528 /* OwnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerTableViewCell.swift; sourceTree = "<group>"; };
 		D0FB89E52067ECA500AADFB0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0FBF12F204C034F00919FC4 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 		4750992E204D1449009E854D /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
+				D027900C206B4BA90060AC6C /* Supplier */,
 				D0FC3CA02050A5E700E47B22 /* Stages */,
 				D00A81D8204D971000FF3CDD /* Projects */,
 				47509933204D146F009E854D /* UserDetails */,
@@ -349,6 +352,14 @@
 				D00A81D9204D972900FF3CDD /* Projects.swift */,
 			);
 			path = Projects;
+			sourceTree = "<group>";
+		};
+		D027900C206B4BA90060AC6C /* Supplier */ = {
+			isa = PBXGroup;
+			children = (
+				D027900D206B4BE20060AC6C /* Supplier.swift */,
+			);
+			path = Supplier;
 			sourceTree = "<group>";
 		};
 		D0FBF12D204C034F00919FC4 /* Helpers */ = {
@@ -698,6 +709,7 @@
 				478A5B7D2050F4A7005217EF /* ShowDocumentViewController.swift in Sources */,
 				4750991B204D1344009E854D /* AnnotationPin.swift in Sources */,
 				D0FC3CA52050BA0100E47B22 /* Utilities.swift in Sources */,
+				D027900E206B4BE20060AC6C /* Supplier.swift in Sources */,
 				4750993A204D1528009E854D /* CoreDatahandler.swift in Sources */,
 				47509926204D1344009E854D /* AppDelegate.swift in Sources */,
 				47509925204D1344009E854D /* signupVC.swift in Sources */,
@@ -900,7 +912,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7HWQXQBQLM;
+				DEVELOPMENT_TEAM = WVYK59KXPF;
 				INFOPLIST_FILE = Mysite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -919,7 +931,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7HWQXQBQLM;
+				DEVELOPMENT_TEAM = WVYK59KXPF;
 				INFOPLIST_FILE = Mysite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
