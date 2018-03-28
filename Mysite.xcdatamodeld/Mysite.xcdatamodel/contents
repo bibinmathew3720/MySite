@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Projects" representedClassName=".Projects" syncable="YES" codeGenerationType="category">
         <attribute name="conEmail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="conLocation" optional="YES" attributeType="String" syncable="YES"/>
@@ -33,6 +33,7 @@
         <attribute name="workDetails" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Supplier" representedClassName=".Supplier" syncable="YES" codeGenerationType="category">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phoneNo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -47,7 +48,7 @@
     <elements>
         <element name="Projects" positionX="-54" positionY="45" width="128" height="345"/>
         <element name="Stages" positionX="-54" positionY="72" width="128" height="165"/>
+        <element name="Supplier" positionX="-54" positionY="162" width="128" height="90"/>
         <element name="UserDetails" positionX="-54" positionY="9" width="128" height="135"/>
-        <element name="Supplier" positionX="-54" positionY="162" width="128" height="75"/>
     </elements>
 </model>

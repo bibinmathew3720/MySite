@@ -24,16 +24,16 @@ class LoginVC: BaseViewController {
     }
     
     @IBAction func logInButtonAction(_ sender: UIButton) {
-//        if(ValidateDetails()){
-//            let userDetail = UserDetails.getUserDetailsWithEmailIdAndPassword(emailId: emailTF.text!, password: passwordTF.text!)
-//            if(userDetail == nil){
-//                showAlertWithMessage(alertMessage: "Invalid login credentials")
-//            }
-//            else{
-//                UserDefaults.standard.set(self.emailTF.text, forKey: Constant.kEmailIdKey)
+        if(ValidateDetails()){
+            let userDetail = UserDetails.getUserDetailsWithEmailIdAndPassword(emailId: emailTF.text!, password: passwordTF.text!)
+            if(userDetail == nil){
+                showAlertWithMessage(alertMessage: "Invalid login credentials")
+            }
+            else{
+                UserDefaults.standard.set(self.emailTF.text, forKey: Constant.kEmailIdKey)
                performSegue(withIdentifier: "contractorlogIntoHomeIdentifier", sender: sender)
-//            }
-//        }
+            }
+        }
     }
     
     @IBAction func backAction(_ sender: UIButton) {

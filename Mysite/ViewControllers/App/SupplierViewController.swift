@@ -28,8 +28,11 @@ class SupplierViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func populateSupplierList(){
-        supplierList = Supplier.getAllSuppliers() as! [Supplier]
-        supplierTableView.reloadData()
+        if let data = Supplier.getAllSuppliers() as? [Supplier]
+        {
+            supplierList = data
+            supplierTableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,12 +60,12 @@ class SupplierViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 110
     }
 
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15
+        return 5
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView=UIView()
@@ -77,6 +80,10 @@ class SupplierViewController: UIViewController,UITableViewDelegate,UITableViewDa
       callNumber(phoneNumber: supplier.phoneNo!)
     }
     
+    func email(index: Int) {
+        let supplier = supplierList[index]
+        email(phoneNumber: supplier.email!)
+    }
     private func callNumber(phoneNumber:String) {
         if let phoneCallURL:NSURL = NSURL(string:"tel://\(phoneNumber)") {
             let application:UIApplication = UIApplication.shared
@@ -84,6 +91,18 @@ class SupplierViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 application.open(phoneCallURL as URL, options: [:], completionHandler: nil)
                 //application.openURL(phoneCallURL as URL);
             }
+        }
+    }
+    
+    private func email(phoneNumber:String) {
+        
+        guard let email = URL(string: "mailto://\(phoneNumber)") else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(email)
+            //            print ("fine")
+        } else {
+            // Fallback on earlier versions
+            UIApplication.shared.openURL(email)
         }
     }
     

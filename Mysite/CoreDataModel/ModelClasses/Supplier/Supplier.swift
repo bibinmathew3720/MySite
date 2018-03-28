@@ -15,6 +15,7 @@ class Supplier: NSManagedObject {
         let supplier = CoreDataHandler.sharedInstance.newEntityForName(entityName: "Supplier") as! Supplier
         supplier.name = supplierData["name"]
         supplier.phoneNo = supplierData["phone"]
+        supplier.email = supplierData["email"]
         CoreDataHandler.sharedInstance.saveContext()
     }
     

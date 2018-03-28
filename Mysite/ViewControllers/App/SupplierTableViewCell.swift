@@ -10,10 +10,12 @@ import UIKit
 
 protocol SupplierTableViewCellDelegate:class{
     func callPhone(index:Int)
+    func email(index:Int)
 }
 
 class SupplierTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var email: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var number: UILabel!
     weak var delegate:SupplierTableViewCellDelegate?
@@ -31,9 +33,14 @@ class SupplierTableViewCell: UITableViewCell {
     func setSupplierDetails(supplier:Supplier){
         self.name.text = supplier.name
         self.number.text = supplier.phoneNo
+         self.email.text = supplier.email
+        
     }
     @IBAction func CallButtonAction(_ sender: Any) {
         delegate?.callPhone(index: self.tag)
+    }
+    @IBAction func MailAction(_ sender: Any) {
+        delegate?.email(index: self.tag)
     }
     
 }
