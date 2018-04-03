@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowDocumentViewController: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
+class ShowDocumentViewController: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate {
     
     @IBOutlet weak var documentName: UILabel!
     @IBOutlet weak var documentImageView: UIImageView!
@@ -28,10 +28,34 @@ class ShowDocumentViewController: UIViewController,UINavigationControllerDelegat
         self.documentImageView.image = Utilities().getImage(identifier: imageIdentifier)
     }
     @IBAction func editImageAction(_ sender: UIButton) {
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
+      
+        
+        
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "MySite", message: "Please select an option", preferredStyle: .actionSheet)
+        
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("Cancel")
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
+        
+        let saveActionButton = UIAlertAction(title: "Camera", style: .default)
+        { _ in
+            self.imagePicker =  UIImagePickerController()
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .camera
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        actionSheetControllerIOS8.addAction(saveActionButton)
+        
+        let deleteActionButton = UIAlertAction(title: "Library", style: .default)
+        { _ in
+            self.imagePicker =  UIImagePickerController()
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .photoLibrary
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        actionSheetControllerIOS8.addAction(deleteActionButton)
+        self.present(actionSheetControllerIOS8, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

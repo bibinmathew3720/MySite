@@ -56,10 +56,32 @@ class AddDocumentViewController: BaseViewController, UINavigationControllerDeleg
     
    //MARK: - Take image
     @IBAction func camerButtonAction(_ sender: Any) {
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
+
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "MySite", message: "Please select an option", preferredStyle: .actionSheet)
+        
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("Cancel")
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
+        
+        let saveActionButton = UIAlertAction(title: "Camera", style: .default)
+        { _ in
+            self.imagePicker =  UIImagePickerController()
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .camera
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        actionSheetControllerIOS8.addAction(saveActionButton)
+        
+        let deleteActionButton = UIAlertAction(title: "Library", style: .default)
+        { _ in
+            self.imagePicker =  UIImagePickerController()
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .photoLibrary
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        actionSheetControllerIOS8.addAction(deleteActionButton)
+        self.present(actionSheetControllerIOS8, animated: true, completion: nil)
     }
     
     //MARK: - Done image capture here

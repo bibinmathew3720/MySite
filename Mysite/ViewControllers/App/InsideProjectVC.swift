@@ -30,7 +30,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     @IBOutlet var detailsSec5: [UIView]!
     
-
+    
     
     @IBOutlet weak var changeSeg: UISegmentedControl!
     
@@ -70,7 +70,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     
     // Second outlet view part
-   // frist stack view outlets
+    // frist stack view outlets
     @IBOutlet weak var estage1: UITextField!
     @IBOutlet weak var eSection1: UITextField!
     @IBOutlet weak var eprogress1: UITextField!
@@ -84,10 +84,10 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     @IBOutlet weak var contractorView: UIScrollView!
     
     var stagesArray = [Stages]()
-   // Map and Pin Function Start
+    // Map and Pin Function Start
     
     var pin:AnnotationPin!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,10 +107,10 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
         pin = AnnotationPin(title: "Abudhabi", Subtitle: "", coordinate: coordinate)
         
         mapView.addAnnotation(pin)
-//        if let pr = Float(selProject.progress!) {
-//            self.progress1.progress = Float(pr/100)
-//            self.progressperLabel.text = selProject.progress!+"%"
-//        }
+        //        if let pr = Float(selProject.progress!) {
+        //            self.progress1.progress = Float(pr/100)
+        //            self.progressperLabel.text = selProject.progress!+"%"
+        //        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -118,55 +118,42 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     }
     
     @IBAction func callButtonConractor(_ sender: Any) {
-        guard let number = URL(string: "telprompt://123456789") else { return }
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(number)
-        } else {
-            // Fallback on earlier versions
-            UIApplication.shared.openURL(number)
+        if (self.conPhoneTF.text?.isEmpty)! {
+            
+        }else{
+            callNumber(phoneNumber: self.conPhoneTF.text!)
         }
     }
     
-   
     @IBAction func emailContractorButton(_ sender: Any) {
-        guard let email = URL(string: "mailto://email@email.com") else { return }
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(email)
-            //            print ("fine")
-        } else {
-            // Fallback on earlier versions
-            UIApplication.shared.openURL(email)
+        if (self.conEmailTF.text?.isEmpty)! {
+            
+        }else{
+            email(phoneNumber: self.conEmailTF.text!)
         }
     }
     
     @IBAction func engineerCallButton(_ sender: Any) {
-        guard let number = URL(string: "telprompt://123456789") else { return }
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(number)
-        } else {
-            // Fallback on earlier versions
-            UIApplication.shared.openURL(number)
+        if (self.phTF.text?.isEmpty)! {
+            
+        }else{
+            callNumber(phoneNumber: self.phTF.text!)
         }
-        
     }
     
     @IBAction func engineerEmailButton(_ sender: Any) {
-        
-        guard let email = URL(string: "mailto://email@email.com") else { return }
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(email)
-            //            print ("fine")
-        } else {
-            // Fallback on earlier versions
-            UIApplication.shared.openURL(email)
+        if (self.emailTF.text?.isEmpty)! {
+            
+        }else{
+            email(phoneNumber: self.emailTF.text!)
         }
     }
     
     
     
-// Map and Pin Function Close
+    // Map and Pin Function Close
     
-// Map Hidden Area Start
+    // Map Hidden Area Start
     @IBAction func MaptoPicBTn(_ sender: Any) {
         LocImageView.isHidden = true
         if LocImageView.isHidden == true{
@@ -195,19 +182,19 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     }
     
     
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        let annotationView = MKAnnotationView(annotation: pin, reuseIdentifier: "dubaiPin")
-//        annotationView.image = UIImage(named: "maps-and-flags")
-//        let transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-//        annotationView.transform = transform
-//        return annotationView
-//    }
-
+    //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    //        let annotationView = MKAnnotationView(annotation: pin, reuseIdentifier: "dubaiPin")
+    //        annotationView.image = UIImage(named: "maps-and-flags")
+    //        let transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+    //        annotationView.transform = transform
+    //        return annotationView
+    //    }
+    
     // Map Hidden Area Close
     
-// DropDown Menu Start
+    // DropDown Menu Start
     
-  
+    
     @IBAction func dropDownBTN(_ sender: UIButton) {
         detailsSec.forEach { (Button) in
             UIView.animate(withDuration: 0.3, animations: {
@@ -255,11 +242,11 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
             })
         }
     }
-   
+    
     @IBAction func ValueChangedSeg(_ sender: UISegmentedControl) {
         if changeSeg.selectedSegmentIndex == 0{
             
-
+            
             tableView.isHidden = false
             engineerView.isHidden = true
             scrollView.isHidden = true
@@ -269,12 +256,12 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
             
         }else if changeSeg.selectedSegmentIndex == 1{
             
-
+            
             tableView.isHidden = true
             engineerView.isHidden = false
             scrollView.isHidden = false
             contractorView.isHidden = true
-           
+            
             
         }else if changeSeg.selectedSegmentIndex == 2{
             tableView.isHidden = true
@@ -305,7 +292,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     @IBAction func navDoneBTN(_ sender: UIBarButtonItem) {
         
-       saveProjectDetails()
+        saveProjectDetails()
     }
     
     func populatPrjectDetails(){
@@ -328,7 +315,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     
     @IBAction func submitButtonAction(_ sender: UIButton) {
-      saveProjectDetails()
+        saveProjectDetails()
     }
     
     func saveProjectDetails(){
@@ -388,7 +375,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     // this method handles row deletion
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-         performSegue(withIdentifier: "editStageSegue", sender: stagesArray[indexPath.section])
+        performSegue(withIdentifier: "editStageSegue", sender: stagesArray[indexPath.section])
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -415,6 +402,28 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
             let project = Projects.getProjectData(projectId: selProject.projectId!)
             let videoVC = segue.destination as! VideoLoadingVC
             videoVC.projectUrl = project.url!
+        }
+    }
+    
+    private func callNumber(phoneNumber:String) {
+        if let phoneCallURL:NSURL = NSURL(string:"tel://\(phoneNumber)") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL as URL)) {
+                application.open(phoneCallURL as URL, options: [:], completionHandler: nil)
+                //application.openURL(phoneCallURL as URL);
+            }
+        }
+    }
+    
+    private func email(phoneNumber:String) {
+        
+        guard let email = URL(string: "mailto://\(phoneNumber)") else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(email)
+            //            print ("fine")
+        } else {
+            // Fallback on earlier versions
+            UIApplication.shared.openURL(email)
         }
     }
 }
