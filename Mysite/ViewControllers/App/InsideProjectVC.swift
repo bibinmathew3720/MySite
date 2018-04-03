@@ -83,6 +83,7 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contractorView: UIScrollView!
     
+    @IBOutlet weak var addStageButton: UIBarButtonItem!
     var stagesArray = [Stages]()
     // Map and Pin Function Start
     
@@ -91,6 +92,13 @@ class InsideProjectVC: BaseViewController, MKMapViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.bool(forKey: "loginType"){
+
+        }else{
+          self.addStageButton.isEnabled = false
+          self.addStageButton.image = nil
+        }
         self.engineerView.isHidden = true;
         scrollView.isHidden = true
         self.tableView.delegate=self;

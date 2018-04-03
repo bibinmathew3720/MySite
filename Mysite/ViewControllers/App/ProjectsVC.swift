@@ -15,6 +15,7 @@ class ProjectsVC: UIViewController, UICollectionViewDataSource, UICollectionView
     @IBOutlet var projectCollectionView: UICollectionView!
     var isContractor:Bool?
     override func viewDidLoad() {
+        UserDefaults.standard.set(isContractor, forKey: "loginType")
         super.viewDidLoad()
         if(isContractor)!{
             
